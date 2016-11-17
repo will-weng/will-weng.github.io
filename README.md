@@ -1,2 +1,2 @@
 # Personal webpage!
-[visit my page](https://wilzlerr.github.io/)
+[visit my page](https://will-weng.github.io/)
