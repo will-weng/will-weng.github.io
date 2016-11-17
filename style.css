@@ -1,12 +1,14 @@
 * {
-  font-family: sans-serif, Arial;  
+  font-family: Times, Arial;  
 }
 
 body {
-  background-color: AliceBlue;
+  background-color: #F7F5E6;
+  color: #333A56;
 }
 
 .header {
-  background-color: MediumSpringGreen;
+  color:#E8E8E8;
+  background-color: #333A56;
   text-align: center;
 }
