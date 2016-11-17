@@ -1,7 +1,3 @@
-head {
-  background-color: LightSkyBlue;
-}
-
 body {
   background-color: AliceBlue;
 }
@@ -9,4 +5,8 @@ body {
 h1, h2, p{
   text-align: center;
   font-family: sans-serif, Arial;
+}
+
+.header {
+  background-color: Crimson;
 }
