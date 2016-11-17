@@ -1,12 +1,12 @@
+* {
+  font-family: sans-serif, Arial;  
+}
+
 body {
   background-color: AliceBlue;
 }
 
-h1, h2, p{
-  text-align: center;
-  font-family: sans-serif, Arial;
-}
-
 .header {
-  background-color: Crimson;
+  background-color: MediumSpringGreen;
+  text-align: center;
 }
