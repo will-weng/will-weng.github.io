@@ -1,15 +1,13 @@
-.header {
+head {
   background-color: LightSkyBlue;
 }
 
 body {
-  background: AliceBlue;
+  background-color: AliceBlue;
 }
 
-h1{
-  color: Navy;
+h1 {
 }
 
 p {
-  color: Navy;
 }
