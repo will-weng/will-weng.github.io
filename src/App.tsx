@@ -8,6 +8,8 @@ import Address from './components/Address';
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="035877856947641773">new CoolorsPaletteWidget("035877856947641773", ["003049","d62828","f77f00","fcbf49","eae2b7"]); </script>
       <GlobalStyles />
       <Header />
       <Body />

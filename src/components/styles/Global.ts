@@ -2,9 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     * {
-        box-sizing: border-box;
-        color: ${({ theme }) => theme.colours.OrangeWheel};
-        margin: 0;
+        color: ${({ theme }) => theme.colours.Xanthous};
         font-family: ${({ theme }) => theme.font.text};
     }
     body {
