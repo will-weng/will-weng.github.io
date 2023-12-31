@@ -7,7 +7,6 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         font-family: ${({ theme }) => theme.font.text};
     }
-
     body {
         background-color: ${({ theme }) => theme.colours.PrussianBlue};  line-height: 1;
     }
