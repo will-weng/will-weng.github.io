@@ -1,13 +1,16 @@
-import React from 'react';
-import './styles/App.css';
+import theme from './components/styles/Theme';
+import GlobalStyles from './components/styles/Global';
+import { ThemeProvider } from 'styled-components';
+import Header from './components/Header';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Page for William Weng, under development</h1>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
+      <Body />
+    </ThemeProvider>
   );
 }
 
