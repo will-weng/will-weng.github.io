@@ -3,6 +3,7 @@ import GlobalStyles from './components/styles/Global';
 import { ThemeProvider } from 'styled-components';
 import Header from './components/Header';
 import Body from './components/Body';
+import Address from './components/Address';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyles />
       <Header />
       <Body />
+      <Address />
     </ThemeProvider>
   );
 }
