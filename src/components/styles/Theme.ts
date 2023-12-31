@@ -1,5 +1,5 @@
 const theme = {
-    colors: {
+    colours: {
         headers: 'Black',
         body: 'MidnightBlue',
         footer: 'Black',
