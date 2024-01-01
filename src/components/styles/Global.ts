@@ -34,6 +34,10 @@ const GlobalStyles = createGlobalStyle`
     textarea {
         white-space: revert;
     }
+
+    h1 {
+        margin: 10px 0px 10px 0px;
+    }
 `
 
 export default GlobalStyles;

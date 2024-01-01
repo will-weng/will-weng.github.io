@@ -3,8 +3,14 @@ interface ProjectSkillsProps {
 }
 
 function ProjectSkills(props: ProjectSkillsProps) {
-    console.log(props)
-    return <>TODO</>;
+    const skills = props.skills
+    return (
+        <ul>
+            {skills.map(skill =>
+                <li>{skill}</li>
+            )}
+        </ul>
+    );
 }
 
 export default ProjectSkills;

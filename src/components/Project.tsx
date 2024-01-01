@@ -1,12 +1,32 @@
+import styled from 'styled-components';
+import ProjectSkills from './ProjectSkills';
 
-function Project() {
+interface ProjectProps {
+    project: Project;
+}
+
+interface Project {
+    name: string,
+    dates: string,
+    description: string,
+    skills: string[]
+}
+
+const ProjectStyled = styled.div`
+    padding-top: 10px;
+    padding-bottom: 10px;
+`
+
+function Project(props: ProjectProps) {
+    const project = props.project
 
     return (
-        <div>
-            { }
-            <h1>Project title</h1>
-            <p>Body text for project description</p>
-        </div>
+        <ProjectStyled key={project.name}>
+            <h2>{project.name}</h2>
+            <p>{project.dates}</p>
+            <p>{project.description}</p>
+            <ProjectSkills skills={project.skills} />
+        </ProjectStyled>
     );
 }
 

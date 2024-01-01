@@ -4,7 +4,8 @@
         "dates": "2017",
         "description": "Crystallize is a Sydney Vivid light show project",
         "skills": [
-            "Project management",
+            "Software design",
+            "Electronics",
             "Arduino"
         ]
     },
@@ -13,8 +14,8 @@
         "dates": "2017",
         "description": "Albert for the blind was a hackathon project at improving accessibility to payment devices",
         "skills": [
-            "test",
-            "test"
+            "Android development",
+            "User interface design"
         ]
     }
 ]

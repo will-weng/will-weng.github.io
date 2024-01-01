@@ -1,22 +1,22 @@
 import projectsData from '../projects.json';
-import ProjectSkills from './ProjectSkills';
+import Project from './Project';
+import styled from 'styled-components';
+
+const ProjectsStyled = styled.div`
+    margin: 10px;
+`
 
 function Projects() {
     const projects = projectsData
 
     return (
-        <>
+        <ProjectsStyled>
+            <h1>Projects I've worked on:</h1>
             {projects.map(project => (
-                <div key={project.name}>
-                    <h2>{project.name}</h2>
-                    <p>{project.dates}</p>
-                    <p>{project.description}</p>
-                    <ProjectSkills skills={project.skills} />
-                </div>
+                <Project key={project.name} project={project} />
             ))}
-        </>
+        </ProjectsStyled>
     );
-
 }
 
 export default Projects;
