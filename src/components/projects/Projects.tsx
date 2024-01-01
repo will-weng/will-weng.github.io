@@ -6,7 +6,8 @@ interface ProjectsProps {
 }
 
 const ProjectsStyled = styled.div`
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     * {
         margin: 5px;

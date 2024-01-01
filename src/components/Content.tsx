@@ -4,6 +4,8 @@ import Header from "./Header";
 import styled from "styled-components";
 
 const ContentStyle = styled.div`
+    display: flex;
+    flex-direction: column;
     max-width: 700px;
     height: 100vh;
     height: 100dvh;

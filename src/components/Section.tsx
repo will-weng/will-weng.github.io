@@ -7,6 +7,9 @@ interface SectionProps {
 }
 
 const SectionStyle = styled.div`
+    h1 {
+        margin-left: 10px;
+    }
 `
 
 function Section(props: SectionProps) {
