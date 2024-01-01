@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 const HeaderStyle = styled.header`
     padding-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px 10px 10px 10px;
 
     * {
         margin: 0px;
@@ -13,7 +12,7 @@ const HeaderStyle = styled.header`
 function Header() {
     return (
         <HeaderStyle>
-            <h1>Header for William Weng's page</h1>
+            <h1>William Weng's</h1>
         </HeaderStyle>
     );
 }

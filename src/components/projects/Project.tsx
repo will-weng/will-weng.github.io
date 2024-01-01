@@ -13,8 +13,8 @@ interface ProjectType {
 }
 
 const ProjectStyled = styled.div`
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 `
 
 function Project(props: ProjectProps) {
