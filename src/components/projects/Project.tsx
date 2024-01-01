@@ -16,6 +16,7 @@ export interface ProjectType {
 const ProjectStyled = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
+    
 `
 
 function Project(props: ProjectProps) {
@@ -32,6 +33,8 @@ function Project(props: ProjectProps) {
             </h2>
             <p>{project.dates}</p>
             <p>{project.description}</p>
+            <br />
+            <h3>Skills</h3>
             <ProjectSkills skills={project.skills} />
         </ProjectStyled>
     );

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HorizontalStyle = styled.hr`
-    width: 50%;
+    width: 70%;
     margin: 10px auto 10px auto;
-    border: 3px solid;
-    border-radius: 3px;
+    border: 2px solid;
+    border-radius: 2px;
     color: ${({ theme }) => theme.colours.Xanthous};
     background-color: ${({ theme }) => theme.colours.Xanthous};
 `
