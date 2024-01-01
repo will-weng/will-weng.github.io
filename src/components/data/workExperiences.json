@@ -3,8 +3,9 @@
         "name": "Smart Health Solutions",
         "link": "https://www.smarthealth.com.au",
         "dates": "2017 - Current",
-        "description": "Smart Health provides hospitals with a cloud solution for patient and medical records",
+        "description": "Smart Health provides hospitals with a cloud solution for patient and medical records. The Smart Health application started in Java but has been implementing a Web User Interface over the recent years. I've gained valuable experience working in a small but competative software business. My main role has been quality assurance and began development in 2022.",
         "skills": [
+            "QFtest",
             "SQL",
             "React",
             "Front-end development",
@@ -16,10 +17,8 @@
     {
         "name": "Myer",
         "dates": "2017 - 2023",
-        "description": "Albert for the blind was a hackathon project at improving accessibility to payment devices",
+        "description": "Myer online fulfillment was a active job that required efficient work to complete large volumes of customer orders. I learned how to socialise, work with team members and find ways to efficiently do my job.",
         "skills": [
-            "Android development",
-            "User interface design",
             "Online fulfillment",
             "Logistics operations"
         ]
