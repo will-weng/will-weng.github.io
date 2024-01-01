@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import Projects from "./Projects";
+import AboutMe from "../AboutMe";
 
 const MainStyle = styled.div`
     line-height: 1;
 `
+
 function Main() {
     return (
         <MainStyle>
-            <h1>Body for William Weng's page</h1>
-            <p>Body text for William Weng's page</p>
+            <AboutMe />
+            <Projects />
         </MainStyle>
     );
 }
