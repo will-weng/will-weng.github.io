@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     /* Preferred box-sizing value */
     * {
+        line-height: 1.25;
         box-sizing: border-box;
         margin: 0;
         background-color: ${({ theme }) => theme.colours.FireEngineRed};

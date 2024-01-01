@@ -7,7 +7,6 @@ import jobs from './data/workExperiences.json'
 import Education from "./Education";
 
 const MainStyle = styled.div`
-    line-height: 1;
 `
 
 function Main() {
@@ -20,7 +19,7 @@ function Main() {
             <Section heading="Projects I've worked on:">
                 <Projects projects={projects} />
             </Section>
-            <Section heading="Educational qualifications:">
+            <Section heading="Academic level:">
                 <Education />
             </Section>
         </MainStyle>
