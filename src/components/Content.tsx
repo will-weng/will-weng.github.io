@@ -9,6 +9,7 @@ const ContentStyle = styled.div`
     max-width: 700px;
     height: 100vh;
     height: 100dvh;
+    min-height: 1000px;
     margin-left: auto;
     margin-right: auto;
     background-color: ${({ theme }) => theme.colours.PrussianBlue};
