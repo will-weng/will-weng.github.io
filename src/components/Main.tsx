@@ -4,6 +4,7 @@ import AboutMe from "./AboutMe";
 import Section from "./Section";
 import projects from './data/projects.json'
 import jobs from './data/workExperiences.json'
+import Education from "./Education";
 
 const MainStyle = styled.div`
     line-height: 1;
@@ -18,6 +19,9 @@ function Main() {
             </Section>
             <Section heading="Projects I've worked on:">
                 <Projects projects={projects} />
+            </Section>
+            <Section heading="Educational qualifications:">
+                <Education />
             </Section>
         </MainStyle>
     );

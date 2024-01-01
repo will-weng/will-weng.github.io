@@ -13,6 +13,10 @@ const ContentStyle = styled.div`
     margin-right: auto;
     background-color: ${({ theme }) => theme.colours.PrussianBlue};
 
+    > * {
+        margin-left: 10px;
+    }
+
     * {
         background-color: ${({ theme }) => theme.colours.PrussianBlue};
     }

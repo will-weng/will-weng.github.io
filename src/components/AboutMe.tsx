@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const AboutMeStyle = styled.div`
-    margin: 10px;
 `
 
 function AboutMe() {
