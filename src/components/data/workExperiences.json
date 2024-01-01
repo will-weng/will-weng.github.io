@@ -1,7 +1,8 @@
 [
     {
         "name": "Smart Health Solutions",
-        "dates": "Current",
+        "link": "https://www.smarthealth.com.au",
+        "dates": "2017 - Current",
         "description": "Smart Health provides hospitals with a cloud solution for patient and medical records",
         "skills": [
             "SQL",
@@ -14,11 +15,13 @@
     },
     {
         "name": "Myer",
-        "dates": "2017",
+        "dates": "2017 - 2023",
         "description": "Albert for the blind was a hackathon project at improving accessibility to payment devices",
         "skills": [
             "Android development",
-            "User interface design"
+            "User interface design",
+            "Online fulfillment",
+            "Logistics operations"
         ]
     }
 ]

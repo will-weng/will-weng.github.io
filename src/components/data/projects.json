@@ -11,16 +11,6 @@
         ]
     },
     {
-        "name": "Vivid 2017",
-        "dates": "2017",
-        "description": "Crystallize is a Sydney Vivid light show project",
-        "skills": [
-            "Software design",
-            "Electronics",
-            "Arduino"
-        ]
-    },
-    {
         "name": "Maker games",
         "dates": "2017",
         "description": "Albert for the blind was a hackathon project at improving accessibility to payment devices",

@@ -16,11 +16,11 @@ function Main() {
             <Section heading="Past work Experiences:">
                 <Projects projects={jobs} />
             </Section>
-            <Section heading="Projects I've worked on:">
-                <Projects projects={projects} />
-            </Section>
             <Section heading="Academic level:">
                 <Education />
+            </Section>
+            <Section heading="Projects I've worked on:">
+                <Projects projects={projects} />
             </Section>
         </MainStyle>
     );

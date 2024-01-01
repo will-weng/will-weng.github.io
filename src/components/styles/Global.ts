@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     /* Preferred box-sizing value */
     * {
         box-sizing: border-box;
+        line-height: 1.25;
         margin: 0;
         background-color: ${({ theme }) => theme.colours.FireEngineRed};
         color: ${({ theme }) => theme.colours.OrangeWheel};
@@ -35,9 +36,6 @@ const GlobalStyles = createGlobalStyle`
         white-space: revert;
     }
 
-    p {
-        line-height: 1.25;
-    }
     h1 {
         margin: 10px 0px 10px 0px;
     }
