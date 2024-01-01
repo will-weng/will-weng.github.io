@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Projects from "./Projects";
-import AboutMe from "../AboutMe";
+import Projects from "./projects/Projects";
+import AboutMe from "./AboutMe";
 
 const MainStyle = styled.div`
     line-height: 1;

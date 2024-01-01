@@ -1,4 +1,4 @@
-import projectsData from '../projects.json';
+import projectsData from '../../projects.json';
 import Project from './Project';
 import styled from 'styled-components';
 

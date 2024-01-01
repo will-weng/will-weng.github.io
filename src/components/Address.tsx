@@ -3,6 +3,7 @@ import styled from "styled-components";
 const AddressStyle = styled.address`
     position: fixed;
     bottom: 0;
+    margin: 10px;
 `
 
 function Address() {
