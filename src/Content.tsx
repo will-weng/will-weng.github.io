@@ -3,6 +3,7 @@ import Main from "./components/Main";
 import Header from "./components/Header";
 import styled from "styled-components";
 import Footer from "./components/Footer";
+import TodoList from "./components/TodoList";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -29,6 +30,7 @@ function Content() {
         <ContentStyle>
             <Header />
             <Main />
+            <TodoList />
             <Address />
             <Footer />
         </ContentStyle>

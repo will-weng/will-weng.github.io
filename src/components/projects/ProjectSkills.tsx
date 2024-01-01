@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface ProjectSkillsProps {
     skills: string[]
 }
+
 const ProjectSkillsStyle = styled.ul`
     columns: 2;
     -webkit-columns: 2;
