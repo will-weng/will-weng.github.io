@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const HorizontalStyle = styled.hr`
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 10px auto;
     border: 3px solid;
     border-radius: 3px;
     color: ${({ theme }) => theme.colours.Xanthous};

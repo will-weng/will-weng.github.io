@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const AddressStyle = styled.address`
     margin-top: auto;
-    margin-bottom: 10px;
 `
 
 function Address() {

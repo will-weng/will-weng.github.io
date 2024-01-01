@@ -1,7 +1,8 @@
-import Address from "./Address";
-import Main from "./Main";
-import Header from "./Header";
+import Address from "./components/Address";
+import Main from "./components/Main";
+import Header from "./components/Header";
 import styled from "styled-components";
+import Footer from "./components/Footer";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -29,6 +30,7 @@ function Content() {
             <Header />
             <Main />
             <Address />
+            <Footer />
         </ContentStyle>
     );
 }

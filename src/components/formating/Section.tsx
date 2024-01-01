@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import HorizontalLine from "./HorizontalLine";
 
 interface SectionProps {
     children: React.ReactNode;
@@ -15,7 +14,6 @@ const SectionStyle = styled.div`
 function Section(props: SectionProps) {
     return (
         <SectionStyle>
-            <HorizontalLine />
             <h1>{props.heading}</h1>
             {props.children}
         </SectionStyle>

@@ -1,3 +1,4 @@
+import HorizontalLine from '../formating/HorizontalLine';
 import Project, { ProjectType } from './Project';
 import styled from 'styled-components';
 
@@ -15,8 +16,11 @@ function Projects(props: ProjectsProps) {
 
     return (
         <ProjectsStyled>
-            {projects.map(project => (
-                <Project key={project.name} project={project} />
+            {projects.map((project, i) => (
+                <>
+                    <Project key={project.name} project={project} />
+                    {i + 1 !== projects.length ? <HorizontalLine /> : null}
+                </>
             ))}
         </ProjectsStyled>
     );
