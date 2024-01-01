@@ -1,5 +1,16 @@
 [
     {
+        "name": "CREATE",
+        "link": "https://www.createunsw.com.au/",
+        "dates": "2017 - 2018",
+        "description": "CREATE was a student led engingeering society at the University of New South Wales. CREATE aimed at making engineering skills more accessible to everyone. It held weekly workshops for software and electrical, created and sold beginner kits for arduinos and ran engineering projects such as participating in Sydney VIVID lights festival every year.",
+        "skills": [
+            "Software design",
+            "Electronics",
+            "Arduino"
+        ]
+    },
+    {
         "name": "Crystalise Vivid 2017",
         "link": "https://www.vividsydney.com/event/light/crystallise",
         "dates": "2017",
@@ -8,6 +19,16 @@
             "Software design",
             "Electronics",
             "Arduino"
+        ]
+    },
+    {
+        "name": "Maker Mentor at the Michael Crouch Innovation Centre (MCIC)",
+        "dates": "2017",
+        "description": "The MCIC was a maker space created for students and open to public. As a maker mentor, I had the responsibility to be trained in using equipments such as the laser cutter, 3d printers and the CNC. I'm also the person watching over the space during my volunteering hours to enjoy the safety of others and can provide consultation for people's innovations.",
+        "skills": [
+            "Laser cutting",
+            "CAD",
+            "CNC Machine"
         ]
     },
     {
