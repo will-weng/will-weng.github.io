@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import ProjectSkills from './ProjectSkills';
 
 interface ProjectProps {
-    project: Project;
+    project: ProjectType;
 }
 
-interface Project {
+interface ProjectType {
     name: string,
     dates: string,
     description: string,

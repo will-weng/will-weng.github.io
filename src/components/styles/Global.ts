@@ -6,8 +6,8 @@ const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
         margin: 0;
-        background-color: ${({ theme }) => theme.colours.OrangeWheel};
-        color: ${({ theme }) => theme.colours.FireEngineRed};
+        background-color: ${({ theme }) => theme.colours.FireEngineRed};
+        color: ${({ theme }) => theme.colours.OrangeWheel};
         font-family: ${({ theme }) => theme.font.text};
     }
     

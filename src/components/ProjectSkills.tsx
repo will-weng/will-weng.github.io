@@ -7,7 +7,7 @@ function ProjectSkills(props: ProjectSkillsProps) {
     return (
         <ul>
             {skills.map(skill =>
-                <li>{skill}</li>
+                <li key={skill}>{skill}</li>
             )}
         </ul>
     );
