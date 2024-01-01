@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Projects from "./projects/Projects";
 import AboutMe from "./AboutMe";
-import WorkExperiences from "./experience/WorkExperiences";
+import Section from "./Section";
+import projects from './data/projects.json'
+import jobs from './data/workExperiences.json'
 
 const MainStyle = styled.div`
     line-height: 1;
@@ -11,8 +13,12 @@ function Main() {
     return (
         <MainStyle>
             <AboutMe />
-            <WorkExperiences />
-            <Projects />
+            <Section heading="Past work Experiences:">
+                <Projects projects={jobs} />
+            </Section>
+            <Section heading="Projects I've worked on:">
+                <Projects projects={projects} />
+            </Section>
         </MainStyle>
     );
 }

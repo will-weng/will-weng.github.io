@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import ProjectSkills from './ProjectSkills';
 
-interface ProjectProps {
-    project: ProjectType;
+export interface ProjectProps {
+    project: ProjectType
 }
 
-interface ProjectType {
+export interface ProjectType {
     name: string,
     dates: string,
     description: string,
@@ -18,7 +18,7 @@ const ProjectStyled = styled.div`
 `
 
 function Project(props: ProjectProps) {
-    const project = props.project
+    const project = props.project;
 
     return (
         <ProjectStyled key={project.name}>

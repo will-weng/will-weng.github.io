@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Smart Health Solutions",
+        "dates": "Current",
+        "description": "Smart Health provides hospitals with a cloud solution for patient and medical records",
+        "skills": [
+            "SQL",
+            "React",
+            "Front-end development",
+            "Testing",
+            "Quality Assurance"
+        ]
+    },
+    {
+        "name": "Myer",
+        "dates": "2017",
+        "description": "Albert for the blind was a hackathon project at improving accessibility to payment devices",
+        "skills": [
+            "Android development",
+            "User interface design"
+        ]
+    }
+]
