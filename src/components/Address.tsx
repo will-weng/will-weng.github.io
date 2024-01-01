@@ -8,7 +8,7 @@ const AddressStyle = styled.address`
 function Address() {
     return (
         <AddressStyle>
-            <h1>Contact me at: </h1>
+            <h1>Contacts</h1>
             Find my github at: <a href="https://github.com/will-weng"> My github!</a> <br />
             Email me at: <a href="mailto:william.weng@hotmail.com">william.weng@hotmail.com</a>
         </AddressStyle>
