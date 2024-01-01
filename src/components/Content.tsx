@@ -5,17 +5,16 @@ import styled from "styled-components";
 
 const ContentStyle = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     max-width: 700px;
-    height: 100vh;
-    height: 100dvh;
-    min-height: 1000px;
     margin-left: auto;
     margin-right: auto;
+    height: 100vh;
+    height: 100dvh;
     background-color: ${({ theme }) => theme.colours.PrussianBlue};
 
     > * {
-        margin-left: 10px;
+        padding-left: 10px;
     }
 
     * {

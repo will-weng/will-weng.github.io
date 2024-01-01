@@ -8,6 +8,7 @@ export interface ProjectProps {
 export interface ProjectType {
     name: string,
     dates: string,
+    link?: string,
     description: string,
     skills: string[]
 }
@@ -22,7 +23,11 @@ function Project(props: ProjectProps) {
 
     return (
         <ProjectStyled key={project.name}>
-            <h2>{project.name}</h2>
+            {
+                project.link ?
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">{project.name}</a> :
+                    <h2>{project.name}</h2>
+            }
             <p>{project.dates}</p>
             <p>{project.description}</p>
             <ProjectSkills skills={project.skills} />
