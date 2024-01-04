@@ -20,13 +20,13 @@ function ProjectDescription(props: ProjectDescriptionProps) {
 
     const description = props.description;
 
-    const shortDescript = description.split(' ').slice(0, 10).join(' ').concat('...');
+    const startDescript = description.split(' ').slice(0, 10).join(' ').concat(' ');
+    const endDescript = description.split(' ').slice(10).join(' ');
+
     return (
         <ProjectDescriptionStyle>
-            {readMore ?
-                <p>{description}</p> :
-                <p>{shortDescript}</p>
-            }
+            <p>{startDescript}
+                {readMore ? endDescript : '...'}</p>
             <ReadMoreStyle onClick={() => { setreadMore(!readMore) }}>Read more...</ReadMoreStyle>
         </ProjectDescriptionStyle >
     );
