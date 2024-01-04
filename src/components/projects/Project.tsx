@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ProjectSkills from './ProjectSkills';
+import ProjectDescription from './ProjectDescription';
 
 export interface ProjectProps {
     project: ProjectType
@@ -32,7 +33,7 @@ function Project(props: ProjectProps) {
                 }
             </h2>
             <p>{project.dates}</p>
-            <p>{project.description}</p>
+            <ProjectDescription description={project.description} />
             <br />
             <h3>Skills</h3>
             <ProjectSkills skills={project.skills} />
