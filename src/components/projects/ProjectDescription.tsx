@@ -15,9 +15,9 @@ const ShowMoreStyle = styled.button`
     margin-left: auto;
     border: 2px solid;
     border-color: ${({ theme }) => theme.colours.Vanilla};
-    border-radius: 15px;
+    border-radius: 14px;
     color: ${({ theme }) => theme.colours.OrangeWheel};
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 
     &:hover {
