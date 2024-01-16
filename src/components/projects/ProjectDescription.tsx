@@ -15,10 +15,10 @@ const ShowMoreStyle = styled.button`
     margin-left: auto;
     border: 2px solid;
     border-color: ${({ theme }) => theme.colours.Vanilla};
-    border-radius: 5px;
+    border-radius: 15px;
+    color: ${({ theme }) => theme.colours.OrangeWheel};
+    font-size: 20px;
     font-weight: bold;
-    background-color: ${({ theme }) => theme.colours.OrangeWheel};
-    color: ${({ theme }) => theme.colours.PrussianBlue};
 
     &:hover {
         text-decoration-color: ${({ theme }) => theme.colours.Vanilla};
