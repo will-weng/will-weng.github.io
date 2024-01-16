@@ -9,7 +9,7 @@ const ProjectDescriptionStyle = styled.div`
     display: flex;
     flex-direction: column;
 `
-const ShowMoreStyle = styled.button`
+const ShowMoreButtonStyle = styled.button`
     margin-top: 6px;
     margin-right: auto;
     margin-left: auto;
@@ -39,9 +39,9 @@ function ProjectDescription(props: ProjectDescriptionProps) {
             <p>{startDescript}
                 {showMore ? endDescript : '...'}
             </p>
-            <ShowMoreStyle onClick={() => { setshowMore(!showMore) }}>
+            <ShowMoreButtonStyle onClick={() => { setshowMore(!showMore) }}>
                 {showMore ? 'Show less' : 'Show more'}
-            </ShowMoreStyle>
+            </ShowMoreButtonStyle>
         </ProjectDescriptionStyle >
     );
 }
