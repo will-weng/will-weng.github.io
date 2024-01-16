@@ -8,7 +8,7 @@ const theme = {
         Vanilla: '#eae2b7ff',
     },
     font: {
-        text: 'Courier New'
+        text: 'Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace'
     }
 }
 

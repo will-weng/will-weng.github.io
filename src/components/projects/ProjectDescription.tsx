@@ -6,9 +6,20 @@ interface ProjectDescriptionProps {
 }
 
 const ProjectDescriptionStyle = styled.div`
+    display: flex;
+    flex-direction: column;
 `
-const ReadMoreStyle = styled.p`
-    text-decoration:underline;
+const ShowMoreStyle = styled.button`
+    margin-top: 6px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid;
+    border-color: ${({ theme }) => theme.colours.Vanilla};
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: ${({ theme }) => theme.colours.OrangeWheel};
+    color: ${({ theme }) => theme.colours.PrussianBlue};
+
     &:hover {
         text-decoration-color: ${({ theme }) => theme.colours.Vanilla};
         color: ${({ theme }) => theme.colours.Vanilla};
@@ -16,18 +27,21 @@ const ReadMoreStyle = styled.p`
 `
 
 function ProjectDescription(props: ProjectDescriptionProps) {
-    const [readMore, setreadMore] = useState(false);
+    const [showMore, setshowMore] = useState(false);
 
     const description = props.description;
 
-    const startDescript = description.split(' ').slice(0, 10).join(' ').concat(' ');
-    const endDescript = description.split(' ').slice(10).join(' ');
+    const startDescript = description.split(' ').slice(0, 10).join(' ');
+    const endDescript = ' ' + description.split(' ').slice(10).join(' ');
 
     return (
         <ProjectDescriptionStyle>
             <p>{startDescript}
-                {readMore ? endDescript : '...'}</p>
-            <ReadMoreStyle onClick={() => { setreadMore(!readMore) }}>Read more...</ReadMoreStyle>
+                {showMore ? endDescript : '...'}
+            </p>
+            <ShowMoreStyle onClick={() => { setshowMore(!showMore) }}>
+                {showMore ? 'Show less' : 'Show more'}
+            </ShowMoreStyle>
         </ProjectDescriptionStyle >
     );
 }
