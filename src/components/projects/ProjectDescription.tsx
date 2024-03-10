@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { isGetAccessorDeclaration } from "typescript";
+import Description from "./Description";
 
 interface ProjectDescriptionProps {
     description: string;
@@ -29,17 +31,12 @@ const ShowMoreButtonStyle = styled.button`
 function ProjectDescription(props: ProjectDescriptionProps) {
     const [showMore, setshowMore] = useState(false);
 
-    const description = props.description;
-
-    const startDescript = description.split(' ').slice(0, 10).join(' ');
-    const endDescript = ' ' + description.split(' ').slice(10).join(' ');
-
     return (
         <ProjectDescriptionStyle>
-            <p>{startDescript}
-                {showMore ? endDescript : '...'}
-            </p>
-            <ShowMoreButtonStyle onClick={() => { setshowMore(!showMore) }}>
+            <Description description={props.description} showMore={showMore} />
+            <ShowMoreButtonStyle onClick={() => {
+                setshowMore(!showMore)
+            }} >
                 {showMore ? 'Show less' : 'Show more'}
             </ShowMoreButtonStyle>
         </ProjectDescriptionStyle >
