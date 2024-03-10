@@ -8,7 +8,7 @@ import TodoList from "./components/TodoList";
 const ContentStyle = styled.div`
     display: flex;
     flex-direction: column; 
-    max-width: 700px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
