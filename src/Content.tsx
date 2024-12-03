@@ -13,7 +13,7 @@ const ContentStyle = styled.div`
     margin-right: auto;
     height: 100vh;
     height: 100dvh;
-    background-color: ${({ theme }) => theme.colours.PrussianBlue};
+    background-color: ${({ theme }) => theme.colours.Main};
 
     > * {
         padding-left: 10px;
@@ -21,7 +21,7 @@ const ContentStyle = styled.div`
     }
 
     * {
-        background-color: ${({ theme }) => theme.colours.PrussianBlue};
+        background-color: ${({ theme }) => theme.colours.Main};
     }
 `
 

@@ -5,8 +5,8 @@ export const HorizontalStyle = styled.hr`
     margin: 10px auto 10px auto;
     border: 2px solid;
     border-radius: 2px;
-    color: ${({ theme }) => theme.colours.Xanthous};
-    background-color: ${({ theme }) => theme.colours.Xanthous};
+    color: ${({ theme }) => theme.colours.Accent};
+    background-color: ${({ theme }) => theme.colours.Accent};
 `
 
 function HorizontalLine() {

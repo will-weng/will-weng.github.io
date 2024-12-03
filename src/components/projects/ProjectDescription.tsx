@@ -16,15 +16,15 @@ const ShowMoreButtonStyle = styled.button`
     margin-right: auto;
     margin-left: auto;
     border: 2px solid;
-    border-color: ${({ theme }) => theme.colours.Vanilla};
+    border-color: ${({ theme }) => theme.colours.Accent};
     border-radius: 14px;
-    color: ${({ theme }) => theme.colours.OrangeWheel};
+    color: ${({ theme }) => theme.colours.Text};
     font-size: 18px;
     font-weight: bold;
 
     &:hover {
-        text-decoration-color: ${({ theme }) => theme.colours.Vanilla};
-        color: ${({ theme }) => theme.colours.Vanilla};
+        text-decoration-color: ${({ theme }) => theme.colours.Secondary};
+        color: ${({ theme }) => theme.colours.Secondary};
     }
 `
 
