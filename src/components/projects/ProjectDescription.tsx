@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { isGetAccessorDeclaration } from "typescript";
 import Description from "./Description";
 
 interface ProjectDescriptionProps {
