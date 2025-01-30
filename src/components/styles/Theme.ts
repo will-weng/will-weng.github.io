@@ -1,6 +1,12 @@
 const theme = {
     // Modern/Approachable
     // https://coolors.co/fafafa-e6e2dd-2b9eb3-d77a61-333333
+    // Base Neutrals:
+        //Soft White (#FAFAFA) or Warm Beige (#E6E2DD) for backgrounds.
+    // Accent Colors:
+        // Teal (#2B9EB3) or Muted Coral (#D77A61) for links, icons, or section dividers.
+        // Dark Gray (#333333) for text.
+
     // https://coolors.co/palette/003049-d62828-f77f00-fcbf49-eae2b7
     // colours: {
     //     PrussianBlue: '#003049ff',
