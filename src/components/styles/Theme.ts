@@ -1,4 +1,6 @@
 const theme = {
+    // Modern/Approachable
+    // https://coolors.co/fafafa-e6e2dd-2b9eb3-d77a61-333333
     // https://coolors.co/palette/003049-d62828-f77f00-fcbf49-eae2b7
     // colours: {
     //     PrussianBlue: '#003049ff',
