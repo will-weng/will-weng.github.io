@@ -16,8 +16,8 @@ const ContentStyle = styled.div`
     background-color: ${({ theme }) => theme.colours.Main};
 
     > * {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     * {

@@ -8,7 +8,6 @@ interface SectionProps {
 
 const SectionStyle = styled.div`
     margin-top: 20px;
-    
 `
 
 function Section(props: SectionProps) {
