@@ -1,2 +1,11 @@
 Folder Handler
-    - 
+    - Given section headings, handle Tab position and width
+    - 1000 px width
+    - multi-layer if vertical screen 500px width
+
+Files
+    - Title
+    - Summary
+    - Content
+
+Content

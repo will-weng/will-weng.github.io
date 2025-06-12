@@ -1,5 +1,7 @@
 import Address from "./components/Address";
 import Main from "./components/Main";
+import Maintenance from "./components/Maintenance";
+import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
 import styled from "styled-components";
 import Footer from "./components/Footer";
@@ -29,10 +31,12 @@ function Content() {
     return (
         <ContentStyle>
             <Header />
-            <Main />
+            <AboutMe />
+            <Maintenance />
+            {/* <Main />
             <TodoList />
             <Address />
-            <Footer />
+            <Footer /> */}
         </ContentStyle>
     );
 }

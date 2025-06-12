@@ -5,6 +5,7 @@ import Section from "./formating/Section";
 import projects from './data/projects.json'
 import jobs from './data/workExperiences.json'
 import Education from "./Education";
+import Maintenance from "./Maintenance";
 
 const MainStyle = styled.div`
 `
