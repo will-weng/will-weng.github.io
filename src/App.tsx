@@ -1,5 +1,5 @@
-import theme from './components/styles/Theme';
-import GlobalStyles from './components/styles/Global';
+import theme from './styles/Theme';
+import GlobalStyles from './styles/Global';
 import { ThemeProvider } from 'styled-components';
 import Content from './Content';
 
