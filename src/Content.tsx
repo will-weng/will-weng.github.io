@@ -1,11 +1,6 @@
-import Address from "./components/Address";
-import Main from "./components/Main";
-import Maintenance from "./components/Maintenance";
-import AboutMe from "./components/AboutMe";
-import Header from "./components/Header";
 import styled from "styled-components";
-import Footer from "./components/Footer";
-import TodoList from "./components/TodoList";
+import AboutMe from "./components/AboutMe";
+import Maintenance from "./components/Maintenance";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -15,6 +10,7 @@ const ContentStyle = styled.div`
     margin-right: auto;
     height: 100vh;
     height: 100dvh;
+    padding-top: 100px;
     background-color: ${({ theme }) => theme.colours.Main};
 
     > * {
@@ -30,7 +26,6 @@ const ContentStyle = styled.div`
 function Content() {
     return (
         <ContentStyle>
-            <Header />
             <AboutMe />
             <Maintenance />
             {/* <Main />

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import Projects from "./projects/Projects";
 import AboutMe from "./AboutMe";
-import Section from "./formating/Section";
-import projects from './data/projects.json'
-import jobs from './data/workExperiences.json'
+import projects from './data/projects.json';
+import jobs from './data/workExperiences.json';
 import Education from "./Education";
-import Maintenance from "./Maintenance";
+import Section from "./formating/Section";
+import Projects from "./projects/Projects";
 
 const MainStyle = styled.div`
 `
