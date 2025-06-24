@@ -6,7 +6,6 @@ const StyledFolder = styled.div`
     max-width: 1000px;
     height: 100vh;
     height: 100dvh;
-    border-style: solid;
     background-color: ${({ theme }) => theme.colours.Main};
     overflow: auto;
 `

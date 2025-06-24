@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import AboutMe from "./components/AboutMe";
 import Folders from "./components/Folders";
 
 const ContentStyle = styled.div`
@@ -30,7 +29,6 @@ const ContentStyle = styled.div`
 function Content() {
     return (
         <ContentStyle>
-            <AboutMe />
             <Folders />
         </ContentStyle>
     );
