@@ -36,7 +36,8 @@ function Address() {
                 id="my-tooltip"
                 anchorSelect=".my-email"
                 content="copied!"
-                openOnClick />
+                openOnClick={true}
+                globalCloseEvents={{ scroll: true, resize: true }} />
         </AddressStyle>
     );
 }
