@@ -36,8 +36,7 @@ function Address() {
                 id="my-tooltip"
                 anchorSelect=".my-email"
                 content="copied!"
-                openOnClick
-            />
+                openOnClick />
         </AddressStyle>
     );
 }
