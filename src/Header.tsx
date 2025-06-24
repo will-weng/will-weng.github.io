@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import Address from "./components/Address";
 
 const HeaderStyle = styled.header`
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     padding-top: 10px;
     left: 0;
     right: 0;
@@ -33,6 +36,7 @@ function Header() {
                     William Weng
                 </StyledH1>
             </a>
+            <Address />
         </HeaderStyle>
     );
 }

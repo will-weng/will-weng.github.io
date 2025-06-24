@@ -1,15 +1,43 @@
+import { Tooltip } from "react-tooltip";
 import styled from "styled-components";
 
 const AddressStyle = styled.address`
-    margin-top: auto;
+    text-align: right;
 `
 
 function Address() {
+    const handleCopy = () => {
+        navigator.clipboard.writeText("william.weng@hotmail.com");
+    };
+
     return (
         <AddressStyle>
-            <h1>Contacts</h1>
-            Find my github at: <a href="https://github.com/will-weng"> My github!</a> <br />
-            Email me at: <a href="mailto:william.weng@hotmail.com">william.weng@hotmail.com</a>
+            <a href="https://github.com/will-weng"
+                target="_blank"
+                rel="noopener noreferrer">
+                Github
+            </a>
+            <br />
+            <a href="https://www.linkedin.com/in/will-weng/"
+                title="https://www.linkedin.com/in/will-weng/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Linkedin
+            </a>
+            <br />
+            <span
+                className="my-email"
+                onClick={handleCopy}
+                style={{ cursor: 'pointer', textDecoration: 'underline' }}
+                data-tooltip-id="copied-tooltip">
+                william.weng@hotmail.com
+            </span>
+            <Tooltip
+                id="my-tooltip"
+                anchorSelect=".my-email"
+                content="copied!"
+                openOnClick
+            />
         </AddressStyle>
     );
 }
