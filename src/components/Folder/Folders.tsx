@@ -7,6 +7,8 @@ const StyledFolder = styled.div`
     height: 100vh;
     height: 100dvh;
     background-color: ${({ theme }) => theme.colours.Main};
+    border-style: solid;
+    border-width: 1px;
     overflow: auto;
 `
 

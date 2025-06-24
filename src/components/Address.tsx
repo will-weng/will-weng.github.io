@@ -19,7 +19,6 @@ function Address() {
             </a>
             <br />
             <a href="https://www.linkedin.com/in/will-weng/"
-                title="https://www.linkedin.com/in/will-weng/"
                 target="_blank"
                 rel="noopener noreferrer">
                 Linkedin

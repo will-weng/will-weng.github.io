@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Folders from "./components/Folders";
+import Folders from "./components/Folder/Folders";
 
 const ContentStyle = styled.div`
     display: flex;
