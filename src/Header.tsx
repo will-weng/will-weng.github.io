@@ -7,7 +7,7 @@ const HeaderStyle = styled.header`
     right: 0;
     margin: auto;
     height: 100px;
-    width: 1000px;
+    width: min(1000px, 100vw);
     background-color: ${({ theme }) => theme.colours.Main};
     padding-left: 40px;
     padding-right: 40px;

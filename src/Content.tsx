@@ -12,6 +12,15 @@ const ContentStyle = styled.div`
     height: 100dvh;
     padding-top: 100px;
     background-color: ${({ theme }) => theme.colours.Main};
+    overflow: auto;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 
     > * {
         padding-left: 40px;
