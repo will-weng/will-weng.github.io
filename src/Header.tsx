@@ -11,6 +11,7 @@ const HeaderStyle = styled.header`
     background-color: ${({ theme }) => theme.colours.Main};
     padding-left: 40px;
     padding-right: 40px;
+    border-style: solid;
 
     * {
         background-color: ${({ theme }) => theme.colours.Main};

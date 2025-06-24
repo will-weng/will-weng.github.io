@@ -25,8 +25,8 @@ const theme = {
     // https://coolors.co/f4d5d0-5d0b0d-183440-f8f6ea-fefefe
     colours: {
         Main: '#183440',
-        Secondary: '#eae2b7ff',
-        Text: '#fcbf49ff',
+        Secondary: '#eae2b7',
+        Text: '#fcbf49',
         Accent: '#F4D5D0',
         Background: '#5D0B0D'
     },
