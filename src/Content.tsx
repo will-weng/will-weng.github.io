@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AboutMe from "./components/AboutMe";
-import Maintenance from "./components/Maintenance";
+import Folders from "./components/Folders";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -13,7 +13,7 @@ const ContentStyle = styled.div`
     padding-top: 100px;
     background-color: ${({ theme }) => theme.colours.Main};
     overflow: auto;
-    
+
     &::-webkit-scrollbar {
         display: none;
     }
@@ -21,11 +21,6 @@ const ContentStyle = styled.div`
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
-
-    > * {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
 
     * {
         background-color: ${({ theme }) => theme.colours.Main};
@@ -36,11 +31,7 @@ function Content() {
     return (
         <ContentStyle>
             <AboutMe />
-            <Maintenance />
-            {/* <Main />
-            <TodoList />
-            <Address />
-            <Footer /> */}
+            <Folders />
         </ContentStyle>
     );
 }
