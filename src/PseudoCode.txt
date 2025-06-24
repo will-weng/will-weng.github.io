@@ -2,6 +2,8 @@ Folder Handler
     - Given section headings, handle Tab position and width
     - 1000 px width
     - multi-layer if vertical screen 500px width
+    - Click to expand
+    - Scroll and layout handling
 
 Files
     - Title
@@ -9,3 +11,14 @@ Files
     - Content
 
 Content
+    - 
+
+Header:
+    - Contact details:
+        - LinkedIn
+        - Github
+        - Email
+    - Icons/images
+
+Theme:
+    - Colour picking
