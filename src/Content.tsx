@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Folders from "./components/Folder/Folders";
+import Maintenance from "./components/Maintenance";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -9,7 +10,7 @@ const ContentStyle = styled.div`
     margin-right: auto;
     height: 100vh;
     height: 100dvh;
-    padding-top: 100px;
+    padding: 140px 40px 40px;
     background-color: ${({ theme }) => theme.colours.Main};
     overflow: auto;
 
@@ -30,6 +31,7 @@ function Content() {
     return (
         <ContentStyle>
             <Folders />
+            <Maintenance />
         </ContentStyle>
     );
 }

@@ -1,0 +1,77 @@
+[
+    {
+        "name": "About Me!",
+        "summary": "Hello! I’m William, a curious problem-solver, tech enthusiast, and passionate developer. My interests span STEM and finance, and I enjoy exploring how technology can create impactful solutions. Currently, I’m sharpening my skills as a full-time software developer, committed to continuous learning and staying adaptive in an ever-evolving tech landscape. Outside work, I have a variety of hobbies that keep life exciting. Lately, I’ve been captivated by poker, drawn to its fascinating blend of strategy, probability, and psychology - a balance that mirrors my love for programming. Looking ahead, I’m eager to collaborate on projects that tackle meaningful challenges, combine creativity with technology, and make a difference. Whether you want to discuss tech, share ideas, or trade poker tips, let’s connect!"
+    },
+    {
+        "name": "Simul Health",
+        "link": "https://www.smarthealth.com.au",
+        "dates": "2025 - Current",
+        "summary": "Simul health aim to update Smart Health and implement artificial intelligence to summarise patient details and generate concise medical service reporting"
+    },
+    {
+        "name": "Smart Health Solutions",
+        "link": "https://www.smarthealth.com.au",
+        "dates": "2017 - 2024",
+        "summary": "Smart Health provides hospitals with a cloud solution for patient and medical records. The Smart Health application started in Java but has been implementing a Web User Interface over the recent years. I've gained valuable experience working in a small but competative software business. My main role has been quality assurance and began development in 2022.",
+        "skills": [
+            "QFtest",
+            "SQL",
+            "React",
+            "Front-end development",
+            "Testing",
+            "Quality Assurance",
+            "TypeScript, JavaScript, HTML, CSS"
+        ]
+    },
+    {
+        "name": "Myer",
+        "dates": "2017 - 2023",
+        "summary": "Myer online fulfillment was a active job that required efficient work to complete large volumes of customer orders. I learned how to socialise, work with team members and find ways to efficiently do my job.",
+        "skills": [
+            "Online fulfillment",
+            "Logistics operations"
+        ]
+    },
+    {
+        "name": "CREATE",
+        "link": "https://www.createunsw.com.au/",
+        "dates": "2017 - 2018",
+        "summary": "CREATE was a student led engingeering society at the University of New South Wales. CREATE aimed at making engineering skills more accessible to everyone. It held weekly workshops for software and electrical, created and sold beginner kits for arduinos and ran engineering projects such as participating in Sydney VIVID lights festival every year.",
+        "skills": [
+            "Software design",
+            "Electronics",
+            "Arduino"
+        ]
+    },
+    {
+        "name": "Crystalise Vivid 2017",
+        "link": "https://www.vividsydney.com/event/light/crystallise",
+        "dates": "2017",
+        "summary": "Crystallize is a Sydney Vivid light show project.",
+        "skills": [
+            "Software design",
+            "Electronics",
+            "Arduino"
+        ]
+    },
+    {
+        "name": "Maker Mentor at the Michael Crouch Innovation Centre (MCIC)",
+        "dates": "2017",
+        "summary": "The MCIC was a maker space created for students and open to public. As a maker mentor, I had the responsibility to be trained in using equipments such as the laser cutter, 3d printers and the CNC. I'm also the person watching over the space during my volunteering hours to enjoy the safety of others and can provide consultation for people's innovations.",
+        "skills": [
+            "Laser cutting",
+            "CAD",
+            "CNC Machine"
+        ]
+    },
+    {
+        "name": "Maker games",
+        "dates": "2017",
+        "summary": "Albert for the blind was a hackathon project at improving accessibility to payment devices",
+        "skills": [
+            "Android development",
+            "User interface design"
+        ]
+    }
+]

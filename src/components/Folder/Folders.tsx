@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import foldercontent from '../data/projects.json';
+import foldercontent from '../data/folderContent.json';
 import Folder, { FolderType } from './Folder';
 
 const StyledFolder = styled.div`

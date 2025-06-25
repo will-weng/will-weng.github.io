@@ -6,23 +6,26 @@ export interface FolderProps {
 
 export interface FolderType {
     name: string,
-    dates: string,
+    summary: string,
+    dates?: string,
     link?: string,
-    description: string,
-    skills: string[]
+    skills?: string[]
 }
 
 const StyledFolder = styled.div`
 
 `
 
-
 function Folder(props: FolderProps) {
     const folder = props.folder;
 
     return (
         <StyledFolder>
-            {folder.name}
+            <h1>
+                {folder.name}
+            </h1>
+            <h3>{folder.dates}</h3>
+            {folder.summary}
         </StyledFolder>
     );
 }
