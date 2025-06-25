@@ -10,7 +10,7 @@ const ContentStyle = styled.div`
     margin-right: auto;
     height: 100vh;
     height: 100dvh;
-    padding: 140px 40px 40px;
+    padding-top: 100px;
     background-color: ${({ theme }) => theme.colours.Main};
     overflow: auto;
 
