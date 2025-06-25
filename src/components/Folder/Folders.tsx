@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderType } from './Folder';
@@ -7,7 +6,7 @@ const StyledFolder = styled.div`
 `
 
 function Folders() {
-    const [foldersList, setFoldersList] = useState<FolderType[]>(foldercontent as FolderType[]);
+    const foldersList: FolderType[] = foldercontent as FolderType[];
 
     return (
         <StyledFolder>
