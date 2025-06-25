@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FolderHeader from "./FolderHeader";
 
 export interface FolderProps {
     folder: FolderType
@@ -21,9 +22,7 @@ function Folder(props: FolderProps) {
 
     return (
         <StyledFolder>
-            <h1>
-                {folder.name}
-            </h1>
+            <FolderHeader title={folder.name} color="test" ></FolderHeader>
             <h3>{folder.dates}</h3>
             {folder.summary}
         </StyledFolder>
