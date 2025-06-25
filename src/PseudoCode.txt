@@ -14,11 +14,8 @@ Content
     - 
 
 Header:
-    - Contact details:
-        - LinkedIn
-        - Github
-        - Email
     - Icons/images
+    - Handle vertical screen squishing
 
 Theme:
     - Colour picking
