@@ -1,21 +1,19 @@
+import { useState } from "react";
 import styled from "styled-components";
+import foldercontent from '../data/projects.json';
+import Folder, { FolderType } from './Folder';
 
 const StyledFolder = styled.div`
-    display: flex;
-    flex-direction: column; 
-    max-width: 1000px;
-    height: 100vh;
-    height: 100dvh;
-    background-color: ${({ theme }) => theme.colours.Main};
-    border-style: solid;
-    border-width: 1px;
-    overflow: auto;
 `
 
 function Folders() {
+    const [foldersList, setFoldersList] = useState<FolderType[]>(foldercontent as FolderType[]);
+
     return (
         <StyledFolder>
-            This is a folder
+            {foldersList.map((folder, i) =>
+                (<Folder key={folder.name} folder={folder}></Folder>)
+            )}
         </StyledFolder>
     );
 }
