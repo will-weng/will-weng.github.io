@@ -8,6 +8,7 @@ const HeaderStyle = styled.header`
     padding-top: 10px;
     left: 0;
     right: 0;
+    top: 0;
     margin: auto;
     height: 100px;
     width: min(1000px, 100vw);

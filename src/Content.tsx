@@ -8,19 +8,17 @@ const ContentStyle = styled.div`
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
-    height: 100dvh;
-    padding-top: 100px;
+    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
+    margin-top: 100px;
     background-color: ${({ theme }) => theme.colours.Main};
-    overflow: auto;
-
-    &::-webkit-scrollbar {
+    
+    overflow: scroll;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
         display: none;
     }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
 
     * {
         background-color: ${({ theme }) => theme.colours.Main};
