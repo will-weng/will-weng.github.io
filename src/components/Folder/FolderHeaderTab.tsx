@@ -5,17 +5,24 @@ interface FolderHeaderTab {
 }
 
 const StyledFolderHeaderTab = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: absolute;
-    border-style: solid;
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    border-radius: 30px 30px 0 0;
+    left: 200px;
+    top: 160px;
 `
 
 function FolderHeaderTab(prop: FolderHeaderTab) {
-
     return (
         <StyledFolderHeaderTab>
-            <h1>
-                {prop.Title}
-            </h1>
+            {prop.Title}
         </StyledFolderHeaderTab>
     );
 }
