@@ -13,6 +13,7 @@ const StyledFolderHeader = styled.div`
 `
 
 const StyledSVG = styled.svg`
+    background-color: ${({ theme }) => theme.colours.Main};
     width: 100%;
     height: 100%;
 `

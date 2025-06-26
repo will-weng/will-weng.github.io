@@ -19,10 +19,6 @@ const ContentStyle = styled.div`
     &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
         display: none;
     }
-
-    * {
-        background-color: ${({ theme }) => theme.colours.Main};
-    }
 `
 
 function Content() {

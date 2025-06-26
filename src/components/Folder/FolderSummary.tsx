@@ -6,6 +6,7 @@ export interface FolderSummaryProps {
 }
 
 const StyledFolderSummary = styled.div`
+    background-color: ${({ theme }) => theme.colours.Main};
     padding-left: 40px;
     padding-right: 40px;
 `

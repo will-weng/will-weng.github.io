@@ -16,8 +16,6 @@ export interface FolderContentType {
 }
 
 const StyledFolder = styled.div`
-    background-color: red;
-    border-style: solid;
 `
 
 function Folder(props: FolderProps) {
