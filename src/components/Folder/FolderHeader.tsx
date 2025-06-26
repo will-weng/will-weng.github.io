@@ -11,19 +11,29 @@ const StyledFolderHeader = styled.div`
 `
 
 const StyledSVG = styled.svg`
-    border-style: solid;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
 `
-const StyledPolygon = styled.polygon`
-    background-color: #000000;
-`
-
 function FolderHeader(prop: FolderHeaderProps) {
+    const pathData = `
+        M 0 400
+        C 0 300 100 200 200 200
+        L 800 200
+        C 900 200 1000 100 1000 0
+    `;
+
     return (
         <StyledFolderHeader>
             <h1>{prop.title}</h1>
             <StyledSVG >
-                <StyledPolygon points={"0% 100%, 0% 40%, 50% 0%, 100% 40%, 100% 100%"}
-                    fill="#3b82f6" />
+                <path
+                    d={pathData}
+                    stroke="black"
+                    strokeWidth={5}
+                    fill="none"
+                    strokeLinecap="round"
+                />
             </StyledSVG>
         </StyledFolderHeader>
     );
