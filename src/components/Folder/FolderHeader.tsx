@@ -15,7 +15,6 @@ const StyledFolderHeader = styled.div`
 const StyledSVG = styled.svg`
     width: 100%;
     height: 100%;
-    border: 1px solid black;
 `
 
 function FolderHeader(prop: FolderHeaderProps) {

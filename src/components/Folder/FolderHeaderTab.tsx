@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface FolderHeaderTab {
+interface FolderHeaderProp {
     Title: string
 }
 
@@ -9,7 +9,7 @@ const StyledFolderHeaderTab = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: 40px;
     overflow: hidden;
     text-align: center;
@@ -19,7 +19,7 @@ const StyledFolderHeaderTab = styled.div`
     top: 160px;
 `
 
-function FolderHeaderTab(prop: FolderHeaderTab) {
+function FolderHeaderTab(prop: FolderHeaderProp) {
     return (
         <StyledFolderHeaderTab>
             {prop.Title}

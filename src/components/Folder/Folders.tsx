@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import foldercontent from '../data/folderContent.json';
-import Folder, { FolderType } from './Folder';
+import Folder, { FolderContentType } from './Folder';
 
 const StyledFolder = styled.div`
 `
 
 function Folders() {
-    const foldersList: FolderType[] = foldercontent as FolderType[];
+    const foldersList: FolderContentType[] = foldercontent as FolderContentType[];
 
     return (
         <StyledFolder>

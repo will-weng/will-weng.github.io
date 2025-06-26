@@ -1,20 +1,23 @@
 import styled from "styled-components";
 import FolderHeader from "./FolderHeader";
+import FolderSummary from "./FolderSummary";
 
 export interface FolderProps {
-    folder: FolderType
+    folder: FolderContentType
 }
 
-export interface FolderType {
+export interface FolderContentType {
     name: string,
     summary: string,
+    tabName?: string,
     dates?: string,
     link?: string,
     skills?: string[]
 }
 
 const StyledFolder = styled.div`
-
+    background-color: red;
+    border-style: solid;
 `
 
 function Folder(props: FolderProps) {
@@ -22,9 +25,8 @@ function Folder(props: FolderProps) {
 
     return (
         <StyledFolder>
-            <FolderHeader title={folder.name} color="test" ></FolderHeader>
-            <h3>{folder.dates}</h3>
-            {folder.summary}
+            <FolderHeader title={folder.tabName ?? folder.name} color="test" />
+            <FolderSummary dates={folder.dates} summary={folder.summary} />
         </StyledFolder>
     );
 }
