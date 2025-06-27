@@ -8,7 +8,7 @@ const StyledFolder = styled.div`
 
 function getColor(index: number, total: number) {
     const hue = (index * 360 / total) % 360;
-    return `hsl(${hue}, 75%, 55%)`;
+    return `hsl(${hue}, 75%, 15%)`;
 }
 
 function Folders() {

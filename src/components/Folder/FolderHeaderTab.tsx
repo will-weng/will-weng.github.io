@@ -1,4 +1,4 @@
-import { darken, saturate } from "polished";
+import { lighten, saturate } from "polished";
 import styled from "styled-components";
 import { FolderHeaderProp } from "./FolderHeader";
 
@@ -21,7 +21,7 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: strin
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
-    const borderColour = darken(0.2, saturate(0.6, prop.colour));
+    const borderColour = lighten(0.3, saturate(0.5, prop.colour));
 
     return (
         <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour}>

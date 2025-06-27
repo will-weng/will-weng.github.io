@@ -9,9 +9,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         font-family: ${({ theme }) => theme.font.text};
         color: ${({ theme }) => theme.colours.Text};
-        text-shadow:
-            -2px 2px 2px ${({ theme }) => theme.colours.Main},
-            0 0 0.3em black;
+        text-shadow: 0 0 0.3em white;
     }
 
     /*

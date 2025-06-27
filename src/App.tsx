@@ -5,6 +5,7 @@ import GlobalStyles from './styles/Global';
 import theme from './styles/Theme';
 
 const StyleApp = styled.div`
+    font-size: large;
     background-color: ${({ theme }) => theme.colours.Background};
     height: 100dvh;
     width: 100dvw;
@@ -15,8 +16,8 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
+            <Header />
             <StyleApp>
-                <Header />
                 <Content />
             </StyleApp>
         </ThemeProvider>

@@ -1,4 +1,4 @@
-import { saturate } from "polished";
+import { lighten, saturate } from "polished";
 import styled from "styled-components";
 import FolderHeaderTab from "./FolderHeaderTab";
 
@@ -39,7 +39,7 @@ function FolderHeader(prop: FolderHeaderProp) {
             <StyledSVG >
                 <path
                     d={pathData}
-                    stroke={saturate(0.6, prop.colour)}
+                    stroke={lighten(0.3, saturate(0.6, prop.colour))}
                     strokeWidth={4}
                     fill={prop.colour}
                     strokeLinecap="round"
