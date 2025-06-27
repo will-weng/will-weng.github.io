@@ -10,13 +10,13 @@ const StyledFolderHeaderTab = styled.div`
     justify-content: flex-end;
     position: absolute;
     width: 150px;
-    height: 40px;
+    height: 30px;
     overflow: hidden;
     text-align: center;
     background-color: black;
-    border-radius: 30px 30px 0 0;
+    border-radius: 20px 20px 0 0;
     left: 200px;
-    top: 160px;
+    top: 170px;
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
