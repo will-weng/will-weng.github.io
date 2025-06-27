@@ -17,8 +17,8 @@ export interface FolderContentType {
 }
 
 const StyledFolder = styled.div`
-    padding-bottom: 400px;
-    margin-bottom: -400px;
+    padding-bottom: 200px;
+    margin-bottom: -200px;
 `
 
 function Folder(props: FolderProps) {

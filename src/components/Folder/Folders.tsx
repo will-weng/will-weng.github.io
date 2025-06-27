@@ -3,6 +3,7 @@ import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
 
 const StyledFolder = styled.div`
+    margin-top: -150px;
     overflow-y: clip;
 `
 

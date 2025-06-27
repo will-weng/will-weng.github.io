@@ -10,9 +10,9 @@ export interface FolderHeaderProp {
 const StyledFolderHeader = styled.div`
     position: relative;
     width: 1000px;
-    height: 1500px;
+    height: 1000px;
     background: transparent;
-    margin-bottom: -1100px;
+    margin-bottom: -600px;
 `
 
 const StyledSVG = styled.svg`
@@ -21,14 +21,14 @@ const StyledSVG = styled.svg`
 `
 
 const pathData = `
-    M 2 1500
+    M 2 1000
     L 2 400
     M 2 400
     C 2 300 100 200 200 200
     L 800 200
     C 900 200 998 100 998 -10
     L 998 400
-    M 998 1500
+    M 998 1000
     L 998 400
 `;
 
