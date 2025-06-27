@@ -18,6 +18,7 @@ const HeaderStyle = styled.header`
     border-style: solid;
 
     * {
+        color: ${({ theme }) => theme.colours.Text};
         background-color: ${({ theme }) => theme.colours.Main};
     }
 `

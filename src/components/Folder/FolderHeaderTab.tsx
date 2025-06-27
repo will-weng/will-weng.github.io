@@ -1,10 +1,7 @@
 import styled from "styled-components";
+import { FolderHeaderProp } from "./FolderHeader";
 
-interface FolderHeaderProp {
-    Title: string
-}
-
-const StyledFolderHeaderTab = styled.div`
+const StyledFolderHeaderTab = styled.div<{ $colour: string }>`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -13,16 +10,20 @@ const StyledFolderHeaderTab = styled.div`
     height: 30px;
     overflow: hidden;
     text-align: center;
-    background-color: black;
     border-radius: 20px 20px 0 0;
     left: 200px;
     top: 170px;
+    background-color: ${props => props.$colour};
+
+    * {
+        background-color: ${props => props.$colour};
+    }
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
     return (
-        <StyledFolderHeaderTab>
-            {prop.Title}
+        <StyledFolderHeaderTab $colour={prop.colour}>
+            {prop.title}
         </StyledFolderHeaderTab>
     );
 }

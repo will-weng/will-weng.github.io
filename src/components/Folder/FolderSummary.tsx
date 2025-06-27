@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export interface FolderSummaryProps {
     dates?: string,
-    summary: string
+    summary: string,
+    colour: string,
 }
 
-const StyledFolderSummary = styled.div`
-    background-color: ${({ theme }) => theme.colours.Main};
+const StyledFolderSummary = styled.div<{ $colour: string }>`
+    background-color: ${props => props.$colour};
     padding-left: 40px;
     padding-right: 40px;
 `
@@ -14,7 +15,7 @@ const StyledFolderSummary = styled.div`
 function FolderSummary(props: FolderSummaryProps) {
 
     return (
-        <StyledFolderSummary>
+        <StyledFolderSummary $colour={props.colour}>
             {props.dates ?? <h3>{props.dates}</h3>}
             {props.summary}
         </StyledFolderSummary>

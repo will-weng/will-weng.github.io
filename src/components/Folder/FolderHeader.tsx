@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import FolderHeaderTab from "./FolderHeaderTab";
 
-export interface FolderHeaderProps {
+export interface FolderHeaderProp {
     title: string,
-    color: string
+    colour: string
 }
 
 const StyledFolderHeader = styled.div`
@@ -13,27 +13,26 @@ const StyledFolderHeader = styled.div`
 `
 
 const StyledSVG = styled.svg`
-    background-color: ${({ theme }) => theme.colours.Main};
     width: 100%;
     height: 100%;
 `
 
-function FolderHeader(prop: FolderHeaderProps) {
+function FolderHeader(prop: FolderHeaderProp) {
     const pathData = `
-        M 0 400
-        C 0 300 100 200 200 200
+        M 2 400
+        C 2 300 100 200 200 200
         L 800 200
-        C 900 200 1000 100 1000 0
+        C 900 200 998 100 998 -2
     `;
 
     return (
         <StyledFolderHeader>
-            <FolderHeaderTab Title={prop.title} />
+            <FolderHeaderTab title={prop.title} colour={prop.colour} />
             <StyledSVG >
                 <path
                     d={pathData}
-                    stroke="black"
-                    strokeWidth={5}
+                    stroke={prop.colour}
+                    strokeWidth={4}
                     fill="none"
                     strokeLinecap="round"
                 />
