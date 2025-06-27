@@ -16,8 +16,7 @@ export interface FolderContentType {
     skills?: string[]
 }
 
-const StyledFolder = styled.div<{ $colour: string }>`
-    background-color: ${props => props.$colour};
+const StyledFolder = styled.div`
     padding-bottom: 400px;
     margin-bottom: -400px;
 `
@@ -26,7 +25,7 @@ function Folder(props: FolderProps) {
     const folder = props.folder;
 
     return (
-        <StyledFolder $colour={props.colour} >
+        <StyledFolder>
             <FolderHeader title={folder.tabName ?? folder.name} colour={props.colour} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={props.colour} />
         </StyledFolder>

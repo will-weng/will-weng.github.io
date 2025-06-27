@@ -24,8 +24,8 @@ const ContentStyle = styled.div`
 function Content() {
     return (
         <ContentStyle>
-            <Folders />
             <Maintenance />
+            <Folders />
         </ContentStyle>
     );
 }

@@ -1,7 +1,8 @@
+import { darken, saturate } from "polished";
 import styled from "styled-components";
 import { FolderHeaderProp } from "./FolderHeader";
 
-const StyledFolderHeaderTab = styled.div<{ $colour: string }>`
+const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: string }>`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -12,17 +13,18 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string }>`
     text-align: center;
     border-radius: 20px 20px 0 0;
     left: 200px;
-    top: 170px;
+    top: 172px;
     background-color: ${props => props.$colour};
-
-    * {
-        background-color: ${props => props.$colour};
-    }
+    border-style: solid;
+    border-color: ${props => props.$borderColour};
+    border-width: 4px 4px 0 4px;
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
+    const borderColour = darken(0.2, saturate(0.6, prop.colour));
+
     return (
-        <StyledFolderHeaderTab $colour={prop.colour}>
+        <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour}>
             {prop.title}
         </StyledFolderHeaderTab>
     );
