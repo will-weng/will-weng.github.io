@@ -5,13 +5,13 @@ Folder Handler
     - Click to expand
     - Scroll and layout handling
 
+Folder
+    - Files like paper that animates into view when folder "opens"
+
 Files
     - Title
     - Summary
     - Content
-
-Content
-    - 
 
 Header:
     - Icons/images
