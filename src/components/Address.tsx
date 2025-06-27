@@ -36,7 +36,7 @@ function Address() {
                 anchorSelect=".my-email"
                 content="copied!"
                 openOnClick={true}
-                globalCloseEvents={{ scroll: true, resize: true }} />
+                globalCloseEvents={{ scroll: true, resize: true, clickOutsideAnchor: true }} />
         </AddressStyle>
     );
 }
