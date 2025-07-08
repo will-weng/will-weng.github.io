@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
-const ViewportContext = createContext<number | undefined>(undefined);;
+const ViewportContext = createContext<number | undefined>(undefined);
 
 const dynamicWidth = () =>
     (window.innerWidth < 1000) ? window.innerWidth : 1000;

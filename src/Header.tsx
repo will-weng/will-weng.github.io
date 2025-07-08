@@ -3,16 +3,17 @@ import Address from "./components/Address";
 
 const HeaderStyle = styled.header`
     position: fixed;
+    height: 100px;
+    width: min(1000px, 100vw);
+    background-color: ${({ theme }) => theme.colours.Main};
+    margin: auto;
+
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
     left: 0;
     right: 0;
     top: 0;
-    margin: auto;
-    height: 100px;
-    width: min(1000px, 100vw);
-    background-color: ${({ theme }) => theme.colours.Main};
     padding-left: 40px;
     padding-right: 40px;
     border-style: solid;

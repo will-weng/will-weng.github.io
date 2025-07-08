@@ -4,9 +4,11 @@ import { useViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeaderTab, { TabPosition } from "./FolderHeaderTab";
 
 export interface FolderHeaderProp {
-    title: string,
-    colour: string,
+    title: string
+    colour: string
     position: TabPosition
+    goToTop?: boolean
+    onClick?: () => void
 }
 
 const StyledFolderHeader = styled.div`
@@ -59,9 +61,17 @@ function generatePath(dynamicLength: number) {
 function FolderHeader(prop: FolderHeaderProp) {
     return (
         <StyledFolderHeader>
-            <FolderHeaderTab title={prop.title} colour={prop.colour} position={prop.position} />
-            <StyledSVG >
+            <FolderHeaderTab
+                title={prop.title} colour={prop.colour}
+                position={prop.position} goToTop={prop.goToTop}
+                onClick={prop.onClick}
+            />
+            <StyledSVG>
                 <path
+                    style={{
+                        cursor: prop.goToTop ? 'n-resize' : 'default'
+                    }}
+                    onClick={prop.onClick}
                     d={generatePath(useViewPortWidth() - 200)}
                     stroke={lighten(0.3, saturate(0.6, prop.colour))}
                     strokeWidth={4}

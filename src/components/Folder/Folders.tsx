@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useViewPortWidth } from "../../context/useViewPortWidth";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
-import { TabPosition } from "./FolderHeaderTab";
 import GoToTop from "./GoToTop";
 
 const StyledFolders = styled.div`
@@ -15,10 +14,7 @@ function getColor(index: number, total: number) {
 
 const findHeaderPosition = (elemPos: number, width: number) => {
     const leftPosition = elemPos % Math.ceil((width - 50) / 160);
-
-    console.log(leftPosition);
-
-    const tabPosition: TabPosition = {
+    const tabPosition = {
         width: "0px",
         leftPosition: (100 + leftPosition * 160).toString() + "px"
     }

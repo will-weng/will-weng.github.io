@@ -7,7 +7,10 @@ export interface TabPosition {
     leftPosition: string,
 }
 
-const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: string, $position: string }>`
+const StyledFolderHeaderTab = styled.div<{
+    $colour: string, $borderColour: string,
+    $position: string, $goToTop?: boolean
+}>`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -23,12 +26,17 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: strin
     border-style: solid;
     border-color: ${props => props.$borderColour};
     border-width: 4px 4px 0 4px;
+    cursor: ${props => (props.$goToTop ? 'n-resize' : 'default')};
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
     const borderColour = lighten(0.3, saturate(0.5, prop.colour));
     return (
-        <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour} $position={prop.position.leftPosition}>
+        <StyledFolderHeaderTab
+            $colour={prop.colour} $borderColour={borderColour}
+            $position={prop.position.leftPosition} $goToTop={prop.goToTop}
+            onClick={prop.onClick}
+        >
             {prop.title}
         </StyledFolderHeaderTab>
     );

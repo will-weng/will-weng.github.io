@@ -14,6 +14,7 @@ const ContentStyle = styled.div`
     
     overflow-x: hidden;
     overflow-y: scroll;
+    
 `
 
 function Content() {
