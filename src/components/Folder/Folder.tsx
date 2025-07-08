@@ -7,7 +7,6 @@ export interface FolderProps {
     folder: FolderContentType,
     colour: string,
     headerPosition: TabPosition,
-    topPosition: string,
 }
 
 export interface FolderContentType {
@@ -19,17 +18,14 @@ export interface FolderContentType {
     skills?: string[]
 }
 
-const StyledFolder = styled.div<{ $topPosition: string }>`
-    position: sticky;
-    top: ${props => props.$topPosition};
+const StyledFolder = styled.div`
     padding-bottom: 200px;
     margin-bottom: -200px;
 `
 
-function Folder({ folder, colour, headerPosition, topPosition }: FolderProps) {
-
+function Folder({ folder, colour, headerPosition }: FolderProps) {
     return (
-        <StyledFolder $topPosition={topPosition} >
+        <StyledFolder>
             <FolderHeader title={folder.tabName ?? folder.name}
                 colour={colour} position={headerPosition} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={colour} />

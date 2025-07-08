@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useViewPortWidth } from "../../context/useViewPortWidth";
 import foldercontent from '../data/folderContent.json';
+import StickBottomWrapper from "../StickyBottom";
 import Folder, { FolderContentType } from './Folder';
 import GoToTop from "./GoToTop";
 
@@ -21,24 +22,22 @@ const findHeaderPosition = (elemPos: number, width: number) => {
     return tabPosition;
 }
 
-const findTopPosition = (elemPos: number, width: number) => {
-    const leftPosition = elemPos % Math.ceil((width - 50) / 160);
-    const row = Math.floor(elemPos / Math.ceil((width - 50) / 160));
-
-    const topPosition = (60 + row * 30 + leftPosition * 5).toString() + "px"
-    return topPosition;
-}
-
 function Folders() {
     const foldersList: FolderContentType[] = foldercontent as FolderContentType[];
     const dynamicWidth = useViewPortWidth();
-
     return (
         <StyledFolders>
+            {/* {foldersList.map((folder, i) =>
+                <StickTopWrapper element={i}>
+                    <Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)}
+                        headerPosition={findHeaderPosition(i, dynamicWidth - 200)} />
+                </StickTopWrapper>
+            )} */}
             {foldersList.map((folder, i) =>
-                <Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)}
-                    headerPosition={findHeaderPosition(i, dynamicWidth - 200)}
-                    topPosition={findTopPosition(i, dynamicWidth - 200)} />
+                <StickBottomWrapper element={i}>
+                    <Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)}
+                        headerPosition={findHeaderPosition(i, dynamicWidth - 200)} />
+                </StickBottomWrapper>
             )}
             <GoToTop color="black"
                 position={{
