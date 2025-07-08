@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Folders from "./components/Folder/Folders";
-import Maintenance from "./components/Maintenance";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -14,17 +13,12 @@ const ContentStyle = styled.div`
     
     overflow-x: hidden;
     overflow-y: scroll;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-    &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
-        display: none;
-    }
 `
 
 function Content() {
     return (
         <ContentStyle>
-            <Maintenance />
+            {/* <Maintenance /> */}
             <Folders />
         </ContentStyle>
     );

@@ -28,7 +28,7 @@ function Folder(props: FolderProps) {
 
     return (
         <StyledFolder>
-            <FolderHeader title={folder.tabName ?? folder.name} colour={props.colour} />
+            <FolderHeader title={folder.tabName ?? folder.name} colour={props.colour} position="150px" />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={props.colour} />
         </StyledFolder>
     );

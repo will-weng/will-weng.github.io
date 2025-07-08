@@ -5,7 +5,8 @@ import FolderHeaderTab from "./FolderHeaderTab";
 
 export interface FolderHeaderProp {
     title: string,
-    colour: string
+    colour: string,
+    position: string
 }
 
 const StyledFolderHeader = styled.div`
@@ -74,7 +75,7 @@ function FolderHeader(prop: FolderHeaderProp) {
 
     return (
         <StyledFolderHeader>
-            <FolderHeaderTab title={prop.title} colour={prop.colour} />
+            <FolderHeaderTab title={prop.title} colour={prop.colour} position={prop.position} />
             <StyledSVG >
                 <path
                     d={generatePath(dynamicWidth)}

@@ -10,6 +10,14 @@ const StyleApp = styled.div`
     height: 100dvh;
     width: 100dvw;
     overflow: hidden;
+
+    * {
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+        &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+            display: none;
+        }
+    }
 `;
 
 function App() {
