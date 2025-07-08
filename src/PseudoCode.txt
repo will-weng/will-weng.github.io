@@ -19,3 +19,7 @@ Header:
 
 Theme:
     - Colour picking
+
+Embeded links:
+    - thumbnail
+    - better text
