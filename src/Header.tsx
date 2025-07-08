@@ -16,6 +16,7 @@ const HeaderStyle = styled.header`
     padding-left: 40px;
     padding-right: 40px;
     border-style: solid;
+    z-index: 1;
 
     * {
         color: ${({ theme }) => theme.colours.Text};
