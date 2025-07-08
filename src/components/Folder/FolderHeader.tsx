@@ -13,7 +13,7 @@ const StyledFolderHeader = styled.div`
     width: 1000px;
     height: 1000px;
     background: transparent;
-    margin-bottom: -600px;
+    margin-bottom: -700px;
 `
 
 const StyledSVG = styled.svg`
@@ -22,7 +22,6 @@ const StyledSVG = styled.svg`
 `
 
 function generatePath(dynamicLength: number) {
-
     //     M 2 600 
     //     L 2 300 
     //     M 2 300 
@@ -33,7 +32,7 @@ function generatePath(dynamicLength: number) {
     //     L 998 300 
     //     M 998 600 
     //     L 998 300
-    const bottomY = 600;
+    const bottomY = 1000;
     const controlY = 300;
     const width = 200 + dynamicLength
     const rightEdge = width - 2

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Folders from "./components/Folder/Folders";
-import Maintenance from "./components/Maintenance";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -24,7 +23,7 @@ const ContentStyle = styled.div`
 function Content() {
     return (
         <ContentStyle>
-            <Maintenance />
+            {/* <Maintenance /> */}
             <Folders />
         </ContentStyle>
     );
