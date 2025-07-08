@@ -3,8 +3,7 @@ import styled from "styled-components";
 const MaintenanceStyle = styled.div`
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
-    width: 1000px;
+    width: min(100dvw, 1000px);
     border-style: solid;
     border-top: hidden;
     padding-top: 100px;
