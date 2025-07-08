@@ -12,7 +12,7 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: strin
     flex-direction: column;
     justify-content: flex-end;
     position: absolute;
-    width: 150px;
+    width: 160px;
     height: 30px;
     overflow: hidden;
     text-align: center;
