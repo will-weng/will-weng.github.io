@@ -20,7 +20,7 @@ export interface FolderContentType {
 
 const StyledFolder = styled.div`
     position: sticky;
-    top: -70px;
+    top: 60px;
     padding-bottom: 200px;
     margin-bottom: -200px;
 `

@@ -14,11 +14,13 @@ function getColor(index: number, total: number) {
 }
 
 const findHeaderPosition = (elemPos: number, total: number, width: number) => {
-    const leftPosition = 150;
+    const leftPosition = elemPos % Math.ceil((width - 50) / 160);
+
+    console.log(leftPosition);
 
     const tabPosition: TabPosition = {
         width: "0px",
-        leftPosition: leftPosition.toString() + "px"
+        leftPosition: (100 + leftPosition * 160).toString() + "px"
     }
     return tabPosition;
 }
@@ -31,7 +33,7 @@ function Folders() {
         <StyledFolders>
             {foldersList.map((folder, i) =>
                 <Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)}
-                    headerPosition={findHeaderPosition(i, foldersList.length, dynamicWidth)} />
+                    headerPosition={findHeaderPosition(i, foldersList.length, dynamicWidth - 200)} />
             )}
             <GoToTop color="black"
                 position={{
