@@ -7,9 +7,8 @@ const ContentStyle = styled.div`
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    height: calc(100vh - 100px);
-    height: calc(100dvh - 100px);
-    margin-top: 100px;
+    height: 100vh;
+    height: 100dvh;
     background-color: ${({ theme }) => theme.colours.Main};
     
     overflow: scroll;
