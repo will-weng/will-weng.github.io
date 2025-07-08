@@ -26,9 +26,10 @@ const findHeaderPosition = (elemPos: number, width: number) => {
 }
 
 const findTopPosition = (elemPos: number, width: number) => {
+    const leftPosition = elemPos % Math.ceil((width - 50) / 160);
     const row = Math.floor(elemPos / Math.ceil((width - 50) / 160));
 
-    const topPosition = (60 + row * 30).toString() + "px"
+    const topPosition = (60 + row * 30 + leftPosition * 5).toString() + "px"
     return topPosition;
 }
 
