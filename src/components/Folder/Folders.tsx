@@ -2,7 +2,8 @@ import styled from "styled-components";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
 
-const StyledFolder = styled.div`
+const StyledFolders = styled.div`
+    overflow-y: scroll;
 `
 
 function getColor(index: number, total: number) {
@@ -14,12 +15,12 @@ function Folders() {
     const foldersList: FolderContentType[] = foldercontent as FolderContentType[];
 
     return (
-        <StyledFolder>
+        <StyledFolders>
             {foldersList.map((folder, i) =>
                 (<Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)}></Folder>)
             )}
             <div style={{ height: '300px' }} />
-        </StyledFolder>
+        </StyledFolders>
     );
 }
 
