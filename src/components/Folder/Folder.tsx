@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { useDynamicViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeader from "./FolderHeader";
 import FolderSummary from "./FolderSummary";
+import OpenFolder from "./OpenFolder";
 
 export interface FolderProps {
     folder: FolderContentType
     elemPos: number
     total: number
+    open: boolean
 }
 
 export interface FolderContentType {
@@ -40,7 +42,7 @@ const FindTopPosition = (elemPos: number) => {
     return topPosition;
 }
 
-function Folder({ folder, elemPos, total }: FolderProps) {
+function Folder({ folder, elemPos, total, open }: FolderProps) {
     const colour = getColor(elemPos, total);
     const folderRef = useRef<HTMLDivElement>(null);
     // const { scrollPos } = useScrollContext();
@@ -49,6 +51,7 @@ function Folder({ folder, elemPos, total }: FolderProps) {
     // useEffect(() => {
     //     const position = folderRef.current?.getBoundingClientRect().top;
     // }, [scrollPos]);
+    console.log(open);
 
     return (
         <StyledFolder
@@ -58,6 +61,7 @@ function Folder({ folder, elemPos, total }: FolderProps) {
             <FolderHeader title={folder.tabName ?? folder.name}
                 colour={colour} elemPos={elemPos} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={colour} />
+            {open && <OpenFolder colour={colour} />}
         </StyledFolder>
     );
 }
