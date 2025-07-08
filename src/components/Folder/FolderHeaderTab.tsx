@@ -28,6 +28,7 @@ const StyledFolderHeaderTab = styled.div<{
     border-color: ${props => props.$borderColour};
     border-width: 4px 4px 0 4px;
     cursor: ${props => (props.$goToTop ? 'n-resize' : 'default')};
+    pointer-events: auto;
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {

@@ -70,7 +70,8 @@ function FolderHeader(prop: FolderHeaderProp) {
             <StyledSVG>
                 <path
                     style={{
-                        cursor: prop.goToTop ? 'n-resize' : 'default'
+                        cursor: prop.goToTop ? 'n-resize' : 'default',
+                        pointerEvents: 'auto'
                     }}
                     onClick={prop.goToTop ? scrollToTop : undefined}
                     d={generatePath(useViewPortWidth() - 200)}

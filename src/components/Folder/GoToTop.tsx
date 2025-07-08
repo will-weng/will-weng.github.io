@@ -12,6 +12,7 @@ const StyledGoToTop = styled.div`
     bottom: 0px;
     overflow: hidden;
     width: min(100dvw, 1000px);
+    pointer-events: none;
 `
 
 function GoToTop(prop: GoToTopProps) {
