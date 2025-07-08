@@ -10,6 +10,12 @@ const GlobalStyles = createGlobalStyle`
         font-family: ${({ theme }) => theme.font.text};
         color: ${({ theme }) => theme.colours.Text};
         text-shadow: 0 0 0.3em white;
+
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+        &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+            display: none;
+        }
     }
 
     /*

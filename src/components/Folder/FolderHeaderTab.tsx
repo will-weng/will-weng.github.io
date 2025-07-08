@@ -23,6 +23,7 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: strin
 function FolderHeaderTab(prop: FolderHeaderProp) {
     const borderColour = lighten(0.3, saturate(0.5, prop.colour));
 
+    console.log(prop.position)
     return (
         <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour} $position={prop.position}>
             {prop.title}

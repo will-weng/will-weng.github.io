@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useViewPortWidth } from "../../context/useViewPortWidth";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
 import GoToTop from "./GoToTop";
@@ -13,13 +14,14 @@ function getColor(index: number, total: number) {
 
 function Folders() {
     const foldersList: FolderContentType[] = foldercontent as FolderContentType[];
-
+    const dynamicWidth = useViewPortWidth();
     return (
         <StyledFolders>
             {foldersList.map((folder, i) =>
                 <Folder key={folder.name} folder={folder} colour={getColor(i, foldersList.length)} />
             )}
-            <GoToTop />
+            {/* <GoToTop color="black" position={(dynamicWidth).toString() + "px"} /> */}
+            <GoToTop color="black" position={(dynamicWidth - 250).toString() + "px"} />
         </StyledFolders>
     );
 }

@@ -1,5 +1,6 @@
 import styled, { ThemeProvider } from 'styled-components';
 import Content from './Content';
+import { ViewportProvider } from './context/useViewPortWidth';
 import Header from './Header';
 import GlobalStyles from './styles/Global';
 import theme from './styles/Theme';
@@ -10,14 +11,6 @@ const StyleApp = styled.div`
     height: 100dvh;
     width: 100dvw;
     overflow: hidden;
-
-    * {
-        scrollbar-width: none;  /* Firefox */
-        -ms-overflow-style: none; /* IE 10+ */
-        &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
-            display: none;
-        }
-    }
 `;
 
 function App() {
@@ -26,7 +19,9 @@ function App() {
             <GlobalStyles />
             <Header />
             <StyleApp>
-                <Content />
+                <ViewportProvider>
+                    <Content />
+                </ViewportProvider>
             </StyleApp>
         </ThemeProvider>
     );

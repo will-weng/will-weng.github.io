@@ -1,6 +1,6 @@
 import { lighten, saturate } from "polished";
-import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeaderTab from "./FolderHeaderTab";
 
 export interface FolderHeaderProp {
@@ -56,29 +56,14 @@ function generatePath(dynamicLength: number) {
   `;
 }
 
-function useViewportWidth() {
-    const [width, setWdith] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => { setWdith(window.innerWidth) };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize); // Cleanup
-    }, []);
-
-    return width;
-}
-
 function FolderHeader(prop: FolderHeaderProp) {
-    const viewportWidth = useViewportWidth();
-    const dynamicWidth = (viewportWidth < 1000) ? viewportWidth - 200 : 800;
-
+    console.log(prop.position)
     return (
         <StyledFolderHeader>
             <FolderHeaderTab title={prop.title} colour={prop.colour} position={prop.position} />
             <StyledSVG >
                 <path
-                    d={generatePath(dynamicWidth)}
+                    d={generatePath(useViewPortWidth() - 200)}
                     stroke={lighten(0.3, saturate(0.6, prop.colour))}
                     strokeWidth={4}
                     fill={prop.colour}
