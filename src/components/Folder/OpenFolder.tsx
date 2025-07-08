@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 export interface OpenFolderProps {
     colour: string
+    isOpen: boolean
 }
 
-const StyledOpenFolder = styled.div<{ $colour: string }>`
-    transition: 5ms ease-in;
+const StyledOpenFolder = styled.div<{ $colour: string, $isOpen: boolean }>`
+    max-height: ${props => props.$isOpen ? "calc(100dvh - 500px)" : "0px"};
+    transition: max-height 0.5s ease;
     height: calc(100dvh - 500px);
     border-left-style: solid;
     border-right-style: solid;
@@ -15,9 +17,9 @@ const StyledOpenFolder = styled.div<{ $colour: string }>`
     background-color: ${props => props.$colour};
 `
 
-function OpenFolder({ colour }: OpenFolderProps) {
+function OpenFolder({ colour, isOpen }: OpenFolderProps) {
     return (
-        <StyledOpenFolder $colour={colour} />
+        <StyledOpenFolder $colour={colour} $isOpen={isOpen} />
     );
 }
 

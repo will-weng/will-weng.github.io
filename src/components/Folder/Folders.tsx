@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../styles/Theme";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
 import OpenFolder from "./OpenFolder";
@@ -16,10 +17,10 @@ function Folders() {
                     key={folder.name} folder={folder}
                     elemPos={i}
                     total={foldersList.length}
-                    open={i == (foldersList.length - 1) ? true : false}
+                    open={i === (foldersList.length - 1) ? true : false}
                 />
             )}
-            <OpenFolder colour={"white"} />
+            <OpenFolder colour={theme.colours.Main} isOpen={true} />
         </StyledFolders>
     );
 }

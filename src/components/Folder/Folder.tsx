@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import { useDynamicViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeader from "./FolderHeader";
@@ -45,23 +45,18 @@ const FindTopPosition = (elemPos: number) => {
 function Folder({ folder, elemPos, total, open }: FolderProps) {
     const colour = getColor(elemPos, total);
     const folderRef = useRef<HTMLDivElement>(null);
-    // const { scrollPos } = useScrollContext();
-    // const [fixedTop, setFixedTop] = useState(0);
-
-    // useEffect(() => {
-    //     const position = folderRef.current?.getBoundingClientRect().top;
-    // }, [scrollPos]);
-    console.log(open);
+    const [openFolder, setOpenFolder] = useState(open)
 
     return (
         <StyledFolder
+            onClick={() => setOpenFolder(!openFolder)}
             ref={folderRef}
             $topPosition={FindTopPosition(elemPos)}
         >
             <FolderHeader title={folder.tabName ?? folder.name}
                 colour={colour} elemPos={elemPos} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={colour} />
-            {open && <OpenFolder colour={colour} />}
+            <OpenFolder colour={colour} isOpen={openFolder} />
         </StyledFolder>
     );
 }
