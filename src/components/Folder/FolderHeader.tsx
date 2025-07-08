@@ -1,5 +1,6 @@
 import { lighten, saturate } from "polished";
 import styled from "styled-components";
+import { useScrollContext } from "../../context/ScrollContext";
 import { useViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeaderTab, { TabPosition } from "./FolderHeaderTab";
 
@@ -8,7 +9,6 @@ export interface FolderHeaderProp {
     colour: string
     position: TabPosition
     goToTop?: boolean
-    onClick?: () => void
 }
 
 const StyledFolderHeader = styled.div`
@@ -59,19 +59,20 @@ function generatePath(dynamicLength: number) {
 }
 
 function FolderHeader(prop: FolderHeaderProp) {
+    var { scrollToTop } = useScrollContext();
+
     return (
         <StyledFolderHeader>
             <FolderHeaderTab
                 title={prop.title} colour={prop.colour}
                 position={prop.position} goToTop={prop.goToTop}
-                onClick={prop.onClick}
             />
             <StyledSVG>
                 <path
                     style={{
                         cursor: prop.goToTop ? 'n-resize' : 'default'
                     }}
-                    onClick={prop.onClick}
+                    onClick={prop.goToTop ? scrollToTop : undefined}
                     d={generatePath(useViewPortWidth() - 200)}
                     stroke={lighten(0.3, saturate(0.6, prop.colour))}
                     strokeWidth={4}

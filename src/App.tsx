@@ -1,9 +1,7 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import Content from './Content';
-import { ViewportProvider } from './context/useViewPortWidth';
+import { AppProviders } from './context/AppProvider';
 import Header from './Header';
-import GlobalStyles from './styles/Global';
-import theme from './styles/Theme';
 
 const StyleApp = styled.div`
     font-size: large;
@@ -15,15 +13,12 @@ const StyleApp = styled.div`
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles />
+        <AppProviders>
             <Header />
             <StyleApp>
-                <ViewportProvider>
-                    <Content />
-                </ViewportProvider>
+                <Content />
             </StyleApp>
-        </ThemeProvider>
+        </AppProviders>
     );
 }
 

@@ -1,5 +1,6 @@
 import { lighten, saturate } from "polished";
 import styled from "styled-components";
+import { useScrollContext } from "../../context/ScrollContext";
 import { FolderHeaderProp } from "./FolderHeader";
 
 export interface TabPosition {
@@ -30,12 +31,13 @@ const StyledFolderHeaderTab = styled.div<{
 `
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
+    const { scrollToTop } = useScrollContext();
     const borderColour = lighten(0.3, saturate(0.5, prop.colour));
     return (
         <StyledFolderHeaderTab
             $colour={prop.colour} $borderColour={borderColour}
             $position={prop.position.leftPosition} $goToTop={prop.goToTop}
-            onClick={prop.onClick}
+            onClick={prop.goToTop ? scrollToTop : undefined}
         >
             {prop.title}
         </StyledFolderHeaderTab>

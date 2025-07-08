@@ -14,15 +14,12 @@ const StyledGoToTop = styled.div`
     width: min(100dvw, 1000px);
 `
 
-const ScrollToTop = () => {
-};
-
 function GoToTop(prop: GoToTopProps) {
     return (
         <StyledGoToTop>
             <FolderHeader
                 title={"Go To Top"} colour={prop.color} position={prop.position}
-                goToTop={true} onClick={ScrollToTop}
+                goToTop={true}
             />
         </StyledGoToTop >
     );

@@ -7,7 +7,7 @@ import GoToTop from "./GoToTop";
 const StyledFolders = styled.div`
 `
 
-function getColor(index: number, total: number) {
+const getColor = (index: number, total: number) => {
     const hue = (index * 360 / total) % 360;
     return `hsl(${hue}, 75%, 15%)`;
 }

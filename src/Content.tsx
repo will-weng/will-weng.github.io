@@ -1,6 +1,8 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Folders from "./components/Folder/Folders";
 import Maintenance from "./components/Maintenance";
+import { useScrollContext } from "./context/ScrollContext";
 
 const ContentStyle = styled.div`
     display: flex;
@@ -14,12 +16,19 @@ const ContentStyle = styled.div`
     
     overflow-x: hidden;
     overflow-y: scroll;
-    
 `
 
 function Content() {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const { registerScrollTarget } = useScrollContext();
+
+    useEffect(() => {
+        registerScrollTarget(containerRef);
+    }, [registerScrollTarget]);
+
     return (
-        <ContentStyle>
+        <ContentStyle ref={containerRef}>
             <Maintenance />
             <Folders />
         </ContentStyle>
