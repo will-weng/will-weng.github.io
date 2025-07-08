@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import FolderHeader from "./FolderHeader";
+import { TabPosition } from "./FolderHeaderTab";
 
 export interface GoToTopProps {
     color: string,
-    position: string
+    position: TabPosition
 }
 
 const StyledGoToTop = styled.div`

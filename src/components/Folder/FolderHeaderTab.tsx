@@ -2,6 +2,11 @@ import { lighten, saturate } from "polished";
 import styled from "styled-components";
 import { FolderHeaderProp } from "./FolderHeader";
 
+export interface TabPosition {
+    width: string,
+    leftPosition: string,
+}
+
 const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: string, $position: string }>`
     display: flex;
     flex-direction: column;
@@ -22,10 +27,8 @@ const StyledFolderHeaderTab = styled.div<{ $colour: string, $borderColour: strin
 
 function FolderHeaderTab(prop: FolderHeaderProp) {
     const borderColour = lighten(0.3, saturate(0.5, prop.colour));
-
-    console.log(prop.position)
     return (
-        <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour} $position={prop.position}>
+        <StyledFolderHeaderTab $colour={prop.colour} $borderColour={borderColour} $position={prop.position.leftPosition}>
             {prop.title}
         </StyledFolderHeaderTab>
     );

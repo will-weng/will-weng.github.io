@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import FolderHeader from "./FolderHeader";
+import { TabPosition } from "./FolderHeaderTab";
 import FolderSummary from "./FolderSummary";
 
 export interface FolderProps {
     folder: FolderContentType,
-    colour: string
+    colour: string,
+    headerPosition: TabPosition,
 }
 
 export interface FolderContentType {
@@ -28,7 +30,8 @@ function Folder(props: FolderProps) {
 
     return (
         <StyledFolder>
-            <FolderHeader title={folder.tabName ?? folder.name} colour={props.colour} position="150px" />
+            <FolderHeader title={folder.tabName ?? folder.name}
+                colour={props.colour} position={props.headerPosition} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={props.colour} />
         </StyledFolder>
     );

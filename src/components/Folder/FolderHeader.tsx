@@ -1,12 +1,12 @@
 import { lighten, saturate } from "polished";
 import styled from "styled-components";
 import { useViewPortWidth } from "../../context/useViewPortWidth";
-import FolderHeaderTab from "./FolderHeaderTab";
+import FolderHeaderTab, { TabPosition } from "./FolderHeaderTab";
 
 export interface FolderHeaderProp {
     title: string,
     colour: string,
-    position: string
+    position: TabPosition
 }
 
 const StyledFolderHeader = styled.div`
@@ -57,7 +57,6 @@ function generatePath(dynamicLength: number) {
 }
 
 function FolderHeader(prop: FolderHeaderProp) {
-    console.log(prop.position)
     return (
         <StyledFolderHeader>
             <FolderHeaderTab title={prop.title} colour={prop.colour} position={prop.position} />
