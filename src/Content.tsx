@@ -12,7 +12,8 @@ const ContentStyle = styled.div`
     height: 100dvh;
     background-color: ${({ theme }) => theme.colours.Main};
     
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
     &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
