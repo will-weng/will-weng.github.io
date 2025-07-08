@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import foldercontent from '../data/folderContent.json';
 import Folder, { FolderContentType } from './Folder';
-import GoToTop from "./GoToTop";
 
 const StyledFolders = styled.div`
 `
@@ -18,7 +17,6 @@ function Folders() {
                     total={foldersList.length}
                 />
             )}
-            <GoToTop />
         </StyledFolders>
     );
 }

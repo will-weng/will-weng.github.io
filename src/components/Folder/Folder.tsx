@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { useDynamicViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeader from "./FolderHeader";
@@ -18,11 +19,11 @@ export interface FolderContentType {
     skills?: string[]
 }
 
-const StyledFolder = styled.div<{ $topPosition: string }>`
+const StyledFolder = styled.div<{
+    $topPosition?: string,
+}>`
     position: sticky;
     top: ${props => props.$topPosition};
-    padding-bottom: 200px;
-    margin-bottom: -200px;
 `
 
 const getColor = (index: number, total: number) => {
@@ -35,15 +36,25 @@ const FindTopPosition = (elemPos: number) => {
     const leftPosition = elemPos % Math.ceil((width - 159) / 160);
     const row = Math.floor(elemPos / Math.ceil((width - 159) / 160));
 
-    const topPosition = (row * 30 + leftPosition * 5).toString() + "px"
+    const topPosition = (row * 30 + leftPosition * 5 - 34).toString() + "px"
     return topPosition;
 }
 
 function Folder({ folder, elemPos, total }: FolderProps) {
     const colour = getColor(elemPos, total);
+    const folderRef = useRef<HTMLDivElement>(null);
+    // const { scrollPos } = useScrollContext();
+    // const [fixedTop, setFixedTop] = useState(0);
+
+    // useEffect(() => {
+    //     const position = folderRef.current?.getBoundingClientRect().top;
+    // }, [scrollPos]);
 
     return (
-        <StyledFolder $topPosition={FindTopPosition(elemPos)} >
+        <StyledFolder
+            ref={folderRef}
+            $topPosition={FindTopPosition(elemPos)}
+        >
             <FolderHeader title={folder.tabName ?? folder.name}
                 colour={colour} elemPos={elemPos} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={colour} />

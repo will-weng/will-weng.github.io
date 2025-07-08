@@ -9,10 +9,9 @@ const ContentStyle = styled.div`
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
-    height: 100dvh;
+    height: calc(100dvh - 200px);
     background-color: ${({ theme }) => theme.colours.Main};
-    margin-top: -72px;
+    margin-top: 200px;
 
     overflow-x: hidden;
     overflow-y: scroll;
@@ -20,16 +19,14 @@ const ContentStyle = styled.div`
 
 function Content() {
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const { registerScrollTarget } = useScrollContext();
+    const { registerScrollTarget, updateScrollPosition } = useScrollContext();
 
     useEffect(() => {
         registerScrollTarget(containerRef.current);
     }, [registerScrollTarget]);
 
     return (
-        <ContentStyle ref={containerRef}>
-            {/* <Maintenance /> */}
+        <ContentStyle ref={containerRef} onScroll={updateScrollPosition} >
             <Folders />
         </ContentStyle>
     );

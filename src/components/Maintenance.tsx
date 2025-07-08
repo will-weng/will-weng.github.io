@@ -8,6 +8,7 @@ const MaintenanceStyle = styled.div`
     width: min(100dvw, 1000px);
     border-style: solid;
     border-top: hidden;
+    left: max(0px, calc((100dvw - 1000px) / 2));
     z-index: 1;
 
     background-color: ${({ theme }) => theme.colours.Main};;

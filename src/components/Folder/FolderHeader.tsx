@@ -15,9 +15,8 @@ export interface FolderHeaderProp {
 const StyledFolderHeader = styled.div`
     position: relative;
     width: 1000px;
-    height: 1000px;
+    height: 200px;
     background: transparent;
-    margin-bottom: -700px;
 `
 
 const StyledSVG = styled.svg`
@@ -26,36 +25,26 @@ const StyledSVG = styled.svg`
 `
 
 function generatePath(dynamicLength: number) {
-    //     M 2 600 
-    //     L 2 300 
-    //     M 2 300 
-    //     C 2 250 50 200 100 200 
-    //     L 900 200 
-    //     C 950 200 998 150 998 100 
-    //     L 998 0 
-    //     L 998 300 
-    //     M 998 600 
-    //     L 998 300
-    const bottomY = 1000;
-    const controlY = 300;
+    // M 2 200 
+    // C 2 150 50 100 100 100 
+    // L 900 100 
+    // C 950 100 998 50 998 0 
+    // L 998 200
+    const bottomY = 200;
+    const controlY = 100;
     const width = 200 + dynamicLength
     const rightEdge = width - 2
     const leftEdge = 2
 
-    const bezier1 = `C 2 250 50 200 100 200`;
-    const bezier2 = `C ${rightEdge - 48} 200 ${rightEdge} 150 ${rightEdge} 100`;
+    const bezier1 = `C 2 150 50 ${controlY} ${controlY} ${controlY}`;
+    const bezier2 = `C ${rightEdge - 48} ${controlY} ${rightEdge} 50 ${rightEdge} 0`;
 
     return `
     M ${leftEdge} ${bottomY}
-    L ${leftEdge} ${controlY}
-    M ${leftEdge} ${controlY}
     ${bezier1}
-    L ${width - 100} 200
+    L ${width - 100} ${controlY}
     ${bezier2}
-    L ${rightEdge} 0
-    L ${rightEdge} ${controlY}
-    M ${rightEdge} ${bottomY}
-    L ${rightEdge} ${controlY}
+    L ${rightEdge} ${bottomY}
   `;
 }
 

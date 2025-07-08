@@ -18,7 +18,7 @@ const StyledFolderHeaderTab = styled.div<{
     text-align: center;
     border-radius: 20px 20px 0 0;
     left: ${props => props.$position};
-    top: 172px;
+    top: 72px;
     background-color: ${props => props.$colour};
     border-style: solid;
     border-color: ${props => props.$borderColour};
