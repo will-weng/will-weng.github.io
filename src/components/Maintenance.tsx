@@ -7,6 +7,7 @@ const MaintenanceStyle = styled.div`
     width: 1000px;
     border-style: solid;
     border-top: hidden;
+    padding-top: 100px;
 
     display: flex;
     flex-direction: column;
