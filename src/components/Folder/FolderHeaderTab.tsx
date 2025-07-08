@@ -1,12 +1,8 @@
 import { lighten, saturate } from "polished";
 import styled from "styled-components";
 import { useScrollContext } from "../../context/ScrollContext";
+import { useDynamicViewPortWidth } from "../../context/useViewPortWidth";
 import { FolderHeaderProp } from "./FolderHeader";
-
-export interface TabPosition {
-    width: string,
-    leftPosition: string,
-}
 
 const StyledFolderHeaderTab = styled.div<{
     $colour: string, $borderColour: string,
@@ -31,13 +27,20 @@ const StyledFolderHeaderTab = styled.div<{
     pointer-events: auto;
 `
 
+const FindHeaderTabPosition = (elemPos: number) => {
+    const width = useDynamicViewPortWidth();
+    const leftPosition = elemPos % Math.ceil((width - 159) / 160);
+
+    return (100 + leftPosition * 160).toString() + "px";
+}
+
 function FolderHeaderTab(prop: FolderHeaderProp) {
     const { scrollToTop } = useScrollContext();
     const borderColour = lighten(0.3, saturate(0.5, prop.colour));
     return (
         <StyledFolderHeaderTab
             $colour={prop.colour} $borderColour={borderColour}
-            $position={prop.position.leftPosition} $goToTop={prop.goToTop}
+            $position={prop.position ?? FindHeaderTabPosition(prop.elemPos)} $goToTop={prop.goToTop}
             onClick={prop.goToTop ? scrollToTop : undefined}
         >
             {prop.title}

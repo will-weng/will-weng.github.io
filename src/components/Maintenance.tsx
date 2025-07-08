@@ -8,7 +8,9 @@ const MaintenanceStyle = styled.div`
     width: min(100dvw, 1000px);
     border-style: solid;
     border-top: hidden;
+    z-index: 1;
 
+    background-color: ${({ theme }) => theme.colours.Main};;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

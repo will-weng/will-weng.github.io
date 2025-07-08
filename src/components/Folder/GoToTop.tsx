@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import FolderHeader from "./FolderHeader";
-import { TabPosition } from "./FolderHeaderTab";
 
-export interface GoToTopProps {
-    color: string,
-    position: TabPosition
-}
 
 const StyledGoToTop = styled.div`
     position: absolute;
@@ -15,12 +10,12 @@ const StyledGoToTop = styled.div`
     pointer-events: none;
 `
 
-function GoToTop(prop: GoToTopProps) {
+function GoToTop() {
     return (
         <StyledGoToTop>
             <FolderHeader
-                title={"Go To Top"} colour={prop.color} position={prop.position}
-                goToTop={true}
+                title={"Go To Top"} colour={"black"} elemPos={0}
+                position={"850px"} goToTop={true}
             />
         </StyledGoToTop >
     );

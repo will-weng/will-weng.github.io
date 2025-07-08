@@ -1,21 +1,20 @@
 import styled from "styled-components";
+import { useDynamicViewPortWidth } from "../../context/useViewPortWidth";
 import FolderHeader from "./FolderHeader";
-import { TabPosition } from "./FolderHeaderTab";
 import FolderSummary from "./FolderSummary";
 
 export interface FolderProps {
-    folder: FolderContentType,
-    colour: string,
-    headerPosition: TabPosition,
-    topPosition: string,
+    folder: FolderContentType
+    elemPos: number
+    total: number
 }
 
 export interface FolderContentType {
-    name: string,
-    summary: string,
-    tabName?: string,
-    dates?: string,
-    link?: string,
+    name: string
+    summary: string
+    tabName?: string
+    dates?: string
+    link?: string
     skills?: string[]
 }
 
@@ -26,12 +25,27 @@ const StyledFolder = styled.div<{ $topPosition: string }>`
     margin-bottom: -200px;
 `
 
-function Folder({ folder, colour, headerPosition, topPosition }: FolderProps) {
+const getColor = (index: number, total: number) => {
+    const hue = (index * 360 / total) % 360;
+    return `hsl(${hue}, 75%, 15%)`;
+}
+
+const FindTopPosition = (elemPos: number) => {
+    const width = useDynamicViewPortWidth();
+    const leftPosition = elemPos % Math.ceil((width - 159) / 160);
+    const row = Math.floor(elemPos / Math.ceil((width - 159) / 160));
+
+    const topPosition = (row * 30 + leftPosition * 5).toString() + "px"
+    return topPosition;
+}
+
+function Folder({ folder, elemPos, total }: FolderProps) {
+    const colour = getColor(elemPos, total);
 
     return (
-        <StyledFolder $topPosition={topPosition} >
+        <StyledFolder $topPosition={FindTopPosition(elemPos)} >
             <FolderHeader title={folder.tabName ?? folder.name}
-                colour={colour} position={headerPosition} />
+                colour={colour} elemPos={elemPos} />
             <FolderSummary dates={folder.dates} summary={folder.summary} colour={colour} />
         </StyledFolder>
     );

@@ -6,10 +6,10 @@ const dynamicWidth = () =>
     (window.innerWidth < 1000) ? window.innerWidth : 1000;
 
 export const ViewportProvider = ({ children }: { children: ReactNode }) => {
-    const [width, setWidth] = useState(dynamicWidth);
+    const [width, setWidth] = useState(dynamicWidth() - 200);
 
     useEffect(() => {
-        const handleResize = () => setWidth(dynamicWidth);
+        const handleResize = () => setWidth(dynamicWidth() - 200);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -21,7 +21,7 @@ export const ViewportProvider = ({ children }: { children: ReactNode }) => {
     );
 };
 
-export const useViewPortWidth = () => {
+export const useDynamicViewPortWidth = () => {
     const context = useContext(ViewportContext);
     if (!context) throw new Error('useViewportWidth must be used within ViewportProvider');
     return context;

@@ -1,25 +1,32 @@
 import { createContext, useContext, useRef } from "react";
 
 type ScrollContextType = {
-    registerScrollTarget: (ref: React.RefObject<HTMLDivElement>) => void;
+    registerScrollTarget: (ref: HTMLDivElement | null) => void;
     scrollToTop?: () => void;
+    scrollPosition?: () => number;
 };
 
 const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 
 export const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
-    const scrollRef = useRef<React.RefObject<HTMLDivElement> | null>(null);
+    const scrollRef = useRef<HTMLDivElement | null>(null);
 
-    const registerScrollTarget = (ref: React.RefObject<HTMLDivElement>) => {
+    const registerScrollTarget = (ref: HTMLDivElement | null) => {
         scrollRef.current = ref;
     };
 
     const scrollToTop = () => {
-        scrollRef.current?.current?.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const scrollPosition = () => {
+        const scrollPos = scrollRef.current?.scrollTop ?? 0;
+        console.log(scrollPos);
+        return scrollPos;
     };
 
     return (
-        <ScrollContext.Provider value={{ registerScrollTarget, scrollToTop }}>
+        <ScrollContext.Provider value={{ registerScrollTarget, scrollToTop, scrollPosition }}>
             {children}
         </ScrollContext.Provider>
     );
